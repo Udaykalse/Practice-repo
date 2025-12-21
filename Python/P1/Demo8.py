@@ -1,0 +1,8 @@
+s = "ab12cd34"
+count = 0
+
+for ch in s:
+    if ch.isdigit():
+        count=count+1
+
+print(count)
