@@ -4,6 +4,7 @@ Nodejs Practice – Day 0: Questions and Answers
 Dom Practice – Day 0: Questions and Answers
 React Practice – Day 0: Questions and Answers
 
-Python - Tutorial Practice Day 1: Questions and Answers
-
+Python  - Tutorial Practice Day 1: Questions and Answers
+Python Project :- 0. (Calculator)
+Javascript Project :- 0. (Calculator)
 Animation And CSS Practice – Day 
