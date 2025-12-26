@@ -8,3 +8,5 @@ Python  - Tutorial Practice Day 1: Questions and Answers
 Python Project :- 0. (Calculator)
 Javascript Project :- 0. (Calculator)
 Animation And CSS Practice – Day 
+
+Python Program to Make a Simple Calculator
