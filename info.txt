@@ -1,5 +1,5 @@
-Javascript Practice – Day : Questions and Answers
-Python Practice – Day 0: Questions and Answers
+Javascript Practice – Day 6: Questions and Answers
+Python Practice – Day 6: Questions and Answers
 Nodejs Practice – Day 0: Questions and Answers
 Dom Practice – Day 0: Questions and Answers
 React Practice – Day 0: Questions and Answers
