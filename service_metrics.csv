@@ -1,0 +1,4 @@
+timestamp,service,status_code,latency_ms,status
+2026-01-01 15:39:29,Google,200,1164.03,UP
+2026-01-01 15:39:29,GitHub,200,762.78,UP
+2026-01-01 15:39:30,Oracle,403,394.22,UP
