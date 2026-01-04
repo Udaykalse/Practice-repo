@@ -1,0 +1,1 @@
+print(len('Python' + '3'))
