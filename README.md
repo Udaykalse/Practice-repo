@@ -34,4 +34,4 @@ To explore these practices locally, follow these steps:
 
 1. **Clone the repo:**
    ```bash
-   git clone [https://github.com/YOUR_USERNAME/your-repo-name.git](https://github.com/YOUR_USERNAME/your-repo-name.git)
+   git clone [https://github.com/Udaykalse/Practice-repo]
