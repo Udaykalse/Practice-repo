@@ -1,0 +1,10 @@
+print(None == False) # False
+print(None == True) # False
+print(None == 0) # False
+print(0 == False) # True
+print(True == False) # False
+print(None == False) # False
+print(False == False) # True
+print(True == True) # True
+print(None == None) # True
+print(0 == True) # False
