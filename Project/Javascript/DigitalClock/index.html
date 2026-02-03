@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Minimal Digital Clock</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        #clock-container {
+            color: #00ff41; 
+            font-size: 70px;
+            background: #222;
+            padding: 20px 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+            border: 2px solid #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="clock-container">00:00:00</div>
+
+    <script>
+        function updateClock() {
+            const now = new Date(); 
+            
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            let seconds = now.getSeconds();
+
+            hours = hours < 10 ? "0" + hours : hours;
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            const timeString = `${hours}:${minutes}:${seconds}`;
+
+            document.getElementById('clock-container').innerText = timeString;
+        }
+
+        setInterval(updateClock, 1000);
+
+        updateClock();
+    </script>
+
+</body>
+</html>
