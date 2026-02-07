@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hover Effect</title>
+    <style>
+      .hover-txt {
+        font-size: 24px;
+        padding: 20px;
+        cursor: pointer;
+        transition: color 0.3s ease;
+        border: 2px solid #333;
+        margin: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="hover-txt" id="hoverPara">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, laborum?
+    </p>
+    <script>
+      const para = document.getElementById("hoverPara");
+      para.addEventListener("mouseenter", function () {
+        para.style.color = "blue";
+      });
+      para.addEventListener("mouseleave", function () {
+        para.style.color = "black";
+      });
+    </script>
+  </body>
+</html>

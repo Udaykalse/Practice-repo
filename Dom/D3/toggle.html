@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toggle Div</title>
+    <style>
+      #contendBox {
+        width: 200px;
+        height: 100px;
+        background-color: rgb(118, 196, 205);
+        margin-top: 10px;
+        padding: 10px;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="toggelBtn">Toggle</button>
+    <div id="contendBox">This is the content box!</div>
+    <script>
+      const toggelBtn = document.getElementById("toggelBtn");
+      const contendBox = document.getElementById("contendBox");
+      toggelBtn.addEventListener("click", function () {
+        contendBox.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
