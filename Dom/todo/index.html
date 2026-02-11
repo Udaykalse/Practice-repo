@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskFlow - Simple To-Do List</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✓</text></svg>">
+  </head>
+  <body>
+    <div class="app">
+      <div class="container">
+        <header>
+          <h1><i class="fas fa-tasks"></i> TaskFlow</h1>
+          <p class="subtitle">Simplify your daily tasks</p>
+        </header>
+        
+        <div class="task-input-section">
+          <div class="input-wrapper">
+            <input 
+              type="text" 
+              id="task-input" 
+              placeholder="What needs to be done today?" 
+              autocomplete="off"
+            />
+            <button id="add-btn" class="add-btn pulse-animation">
+              <i class="fas fa-plus"></i> Add Task
+            </button>
+          </div>
+          <p class="hint">
+            <i class="fas fa-lightbulb"></i> Press Enter to add task quickly
+          </p>
+        </div>
+        
+        <div class="stats">
+          <div class="stat-card">
+            <div class="stat-value"><span id="task-count">0</span></div>
+            <div class="stat-label">Pending Tasks</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value"><span id="completed-count">0</span></div>
+            <div class="stat-label">Completed</div>
+          </div>
+        </div>
+        
+        <div id="tasks-container">
+          <div id="tasks-list"></div>
+          <div id="empty-state" class="empty-state">
+            <i class="fas fa-clipboard-list"></i>
+            <h3>No tasks yet</h3>
+            <p>Add your first task above to get started!</p>
+          </div>
+        </div>
+        
+        <div class="task-filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="pending">Pending</button>
+          <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+        
+        <div id="error" class="error-message">
+          <i class="fas fa-exclamation-triangle"></i>
+          <span>Please enter a task before adding!</span>
+        </div>
+      </div>
+      
+      <footer class="footer">
+        <p>Made with <i class="fas fa-heart"></i> by a developer who understands productivity</p>
+        <p class="footer-note">Double-click tasks to edit • Drag to reorder coming soon</p>
+      </footer>
+    </div>
+    
+    <script src="./script.js"></script>
+  </body>
+</html>
