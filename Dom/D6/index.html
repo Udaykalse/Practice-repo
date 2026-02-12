@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remove an Element (Delete Button)</title>
+  </head>
+  <body>
+    <ul id="tList">
+      <li>Task 1 <button class="delBtn">Delete</button></li>
+      <li>Task 2 <button class="delBtn">Delete</button></li>
+    </ul>
+    <script>
+      const delBtn = document.querySelectorAll(".delBtn");
+      delBtn.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.target.parentElement.remove();
+        });
+      });
+    </script>
+  </body>
+</html>

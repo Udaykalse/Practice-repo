@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Items Dynamically in List</title>
+  </head>
+  <body>
+    <input type="text" id="itmInput" />
+    <button id="addbtn">Add</button>
+    <ul id="list"></ul>
+    <script>
+      const input = document.getElementById("itmInput");
+      const btn = document.getElementById("addbtn");
+      const list = document.getElementById("list");
+      btn.addEventListener("click", () => {
+        const value = input.value.trim();
+
+        if (value === "") return;
+        const li = document.createElement("li");
+        li.textContent = value;
+        list.appendChild(li);
+        input.value = "";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change Text + Style on Button Click</title>
+  </head>
+  <body>
+    <h2 id="title">Hello World</h2>
+    <button id="btn">Change</button>
+    <script>
+      const title = document.getElementById("title");
+      const btn = document.getElementById("btn");
+      btn.addEventListener("click", () => {
+        title.textContent = "Text Chnaged!";
+        title.style.color = "red";
+      });
+    </script>
+  </body>
+</html>
