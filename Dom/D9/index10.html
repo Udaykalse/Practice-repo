@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Filter</title>
+  </head>
+  <body>
+    <input id="search" placeholder="search...." />
+    <ul id="itM">
+      <li>Apple</li>
+      <li>Banana</li>
+      <li>Orange</li>
+      <li>Mango</li>
+    </ul>
+
+    <script>
+      const search = document.getElementById("search");
+      const item = document.querySelectorAll("#itM li");
+      search.addEventListener("input", () => {
+        const value = search.value.toLowerCase();
+        item.forEach((item) => {
+          if (item.textContent.toLowerCase().includes(value)) {
+            item.style.display = "block";
+          } else {
+            item.style.display = "none";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

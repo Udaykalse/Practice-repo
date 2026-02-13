@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <input type="text" id="userName" placeholder="Enter Username" />
+    <p id="error" style="color: red"></p>
+    <button id="submitBtn">Submit</button>
+    <p id="userNamePrint"></p>
+    <script>
+      const userName = document.getElementById("userName");
+      const error = document.getElementById("error");
+      const submitBtn = document.getElementById("submitBtn");
+      const userNamePrint = document.getElementById("userNamePrint");
+
+      submitBtn.addEventListener("click", () => {
+        const value = userName.value.trim();
+        if (value === "") {
+          error.textContent = "Username is required!";
+        } else if (value.length < 3) {
+          error.textContent = "Username must be more than 3 char";
+        } else {
+          error.textContent = "";
+          alert("Form Submitted Successfully");
+          userNamePrint.textContent = value;
+        }
+      });
+    </script>
+  </body>
+</html>

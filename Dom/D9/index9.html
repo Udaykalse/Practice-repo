@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Todo App</title>
+  </head>
+  <body>
+    <input type="text" id="tInput" />
+    <button id="addTask">Add</button>
+    <ul id="toList"></ul>
+    <script>
+      const input = document.getElementById("tInput");
+      const addTask = document.getElementById("addTask");
+      const todoList = document.getElementById("toList");
+      addTask.addEventListener("click", () => {
+        const task = input.value.trim();
+        if (task === "") return;
+        const li = document.createElement("LI");
+        li.innerHTML = `
+        <span class ="taskText">${task}</span>
+        <button class='doneBtn'>Done</button>
+        <button class='delBtn'>Delete</button>
+        `;
+        todoList.appendChild(li);
+        input.value = "";
+      });
+
+      todoList.addEventListener("click", (e) => {
+        if (e.target.classList.contains("doneBtn")) {
+          e.target.parentElement.querySelector(
+            ".taskText",
+          ).style.textDecoration = "line-through";
+        }
+
+        if (e.target.classList.contains("delBtn")) {
+          e.target.parentElement.remove();
+        }
+      });
+    </script>
+  </body>
+</html>

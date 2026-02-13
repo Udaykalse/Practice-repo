@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Call</title>
+  </head>
+  <body>
+    <h2>User</h2>
+    <button id="loadBtn">Load</button>
+    <ul id="userList"></ul>
+
+    <script>
+      const loadBtn = document.getElementById("loadBtn");
+      const userList = document.getElementById("userList");
+      loadBtn.addEventListener("click", async () => {
+        const res = await fetch("https://jsonplaceholder.typicode.com/users");
+        const data = await res.json();
+        userList.innerHTML = "";
+        data.forEach((user) => {
+          const li = document.createElement("li");
+          li.textContent = user.name;
+          userList.appendChild(li);
+        });
+      });
+    </script>
+  </body>
+</html>

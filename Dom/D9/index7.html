@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Show JSON Data in Table</title>
+  </head>
+  <body>
+    <h2>Student Table</h2>
+    <table border="1" cellpadding="10" id="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+      <tbody id="tBody"></tbody>
+    </table>
+    <script>
+      const students = [
+        { id: 1, name: "Parvej", age: 22 },
+        { id: 2, name: "Siddharth", age: 21 },
+        { id: 3, name: "Aman", age: 23 },
+      ];
+
+      const tbody = document.getElementById("tBody");
+      //   const tbody = document.getElementById()
+      students.forEach((stud) => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+        <td>${stud.id}</td>
+        <td>${stud.name}</td>
+        <td>${stud.age}</td>
+
+        `;
+        tbody.appendChild(tr);
+      });
+    </script>
+  </body>
+</html>

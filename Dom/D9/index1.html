@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button</title>
+  </head>
+  <body>
+    <button id="btn">Click</button>
+    <script>
+      const btn = document.getElementById("btn");
+      btn.addEventListener("click", () => {
+        // btn.innerText = "Clicked";
+        // btn.style.backgroundColor = "red";
+        btn.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
