@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Fresher Q&A</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --surface: #12121a;
+    --card: #1a1a26;
+    --border: #2a2a3e;
+    --accent: #7c6af7;
+    --accent2: #f7c06a;
+    --accent3: #6af7c0;
+    --text: #e8e8f0;
+    --muted: #7070a0;
+    --code-bg: #0d0d18;
+    --tag-with: #1a2e1a;
+    --tag-without: #2e1a1a;
+    --tag-with-color: #6af7a0;
+    --tag-without-color: #f7826a;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Syne', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Animated background */
+  body::before {
+    content: '';
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(ellipse at 20% 20%, rgba(124,106,247,0.06) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(106,247,192,0.04) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(247,192,106,0.03) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Header */
+  header {
+    text-align: center;
+    margin-bottom: 60px;
+    animation: fadeDown 0.8s ease both;
+  }
+
+  .badge {
+    display: inline-block;
+    background: rgba(124,106,247,0.15);
+    border: 1px solid rgba(124,106,247,0.3);
+    color: var(--accent);
+    font-size: 11px;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 100px;
+    margin-bottom: 24px;
+  }
+
+  h1 {
+    font-size: clamp(36px, 6vw, 64px);
+    font-weight: 800;
+    line-height: 1.05;
+    margin-bottom: 16px;
+    background: linear-gradient(135deg, #fff 0%, var(--accent) 50%, var(--accent3) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  header p {
+    color: var(--muted);
+    font-size: 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 300;
+  }
+
+  /* Stats bar */
+  .stats-bar {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    animation: fadeUp 0.8s 0.2s ease both;
+  }
+
+  .stat {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .stat span {
+    color: var(--accent2);
+    font-weight: 500;
+  }
+
+  /* Filter tabs */
+  .filters {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 36px;
+    flex-wrap: wrap;
+    animation: fadeUp 0.8s 0.3s ease both;
+  }
+
+  .filter-btn {
+    padding: 8px 20px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--muted);
+    font-family: 'Syne', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    letter-spacing: 0.5px;
+  }
+
+  .filter-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .filter-btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+  }
+
+  /* Search */
+  .search-wrap {
+    margin-bottom: 36px;
+    position: relative;
+    animation: fadeUp 0.8s 0.35s ease both;
+  }
+
+  .search-wrap input {
+    width: 100%;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    padding: 14px 18px 14px 46px;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .search-wrap input:focus { border-color: var(--accent); }
+  .search-wrap input::placeholder { color: var(--muted); }
+
+  .search-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--muted);
+    font-size: 16px;
+  }
+
+  /* Q&A Cards */
+  .qa-list { display: flex; flex-direction: column; gap: 16px; }
+
+  .qa-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: border-color 0.25s, transform 0.2s;
+    animation: fadeUp 0.5s ease both;
+  }
+
+  .qa-card:hover { border-color: rgba(124,106,247,0.4); transform: translateY(-1px); }
+
+  .qa-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 24px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .q-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--accent);
+    background: rgba(124,106,247,0.1);
+    border: 1px solid rgba(124,106,247,0.2);
+    padding: 3px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    margin-top: 2px;
+    min-width: 36px;
+    text-align: center;
+  }
+
+  .q-text {
+    flex: 1;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--text);
+  }
+
+  .q-toggle {
+    color: var(--muted);
+    font-size: 20px;
+    transition: transform 0.3s;
+    min-width: 20px;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  .qa-card.open .q-toggle { transform: rotate(45deg); color: var(--accent); }
+
+  .qa-body {
+    display: none;
+    padding: 0 24px 24px;
+    border-top: 1px solid var(--border);
+    margin-top: 0;
+  }
+
+  .qa-card.open .qa-body { display: block; }
+
+  /* Category chips */
+  .category-chips {
+    display: flex;
+    gap: 8px;
+    margin: 16px 0 20px;
+    flex-wrap: wrap;
+  }
+
+  .chip {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+
+  .chip.topic {
+    background: rgba(124,106,247,0.1);
+    color: var(--accent);
+    border: 1px solid rgba(124,106,247,0.25);
+  }
+
+  .chip.with-method {
+    background: var(--tag-with);
+    color: var(--tag-with-color);
+    border: 1px solid rgba(106,247,160,0.2);
+  }
+
+  .chip.without-method {
+    background: var(--tag-without);
+    color: var(--tag-without-color);
+    border: 1px solid rgba(247,130,106,0.2);
+  }
+
+  /* Answer sections */
+  .answer-block {
+    margin-bottom: 20px;
+  }
+
+  .answer-block:last-child { margin-bottom: 0; }
+
+  .answer-label {
+    font-size: 11px;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .answer-label.with { color: var(--tag-with-color); }
+  .answer-label.without { color: var(--tag-without-color); }
+  .answer-label.concept { color: var(--accent2); }
+
+  .answer-label::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+  }
+
+  .explanation {
+    color: #b0b0c8;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 14px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 300;
+  }
+
+  /* Code blocks */
+  pre {
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px;
+    overflow-x: auto;
+    margin-bottom: 14px;
+    position: relative;
+  }
+
+  code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    line-height: 1.7;
+    color: #c8d3f5;
+  }
+
+  .copy-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(124,106,247,0.15);
+    border: 1px solid rgba(124,106,247,0.3);
+    color: var(--accent);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all 0.2s;
+  }
+
+  .copy-btn:hover { background: rgba(124,106,247,0.3); }
+  .copy-btn.copied { color: var(--tag-with-color); border-color: rgba(106,247,160,0.3); }
+
+  /* Syntax highlighting */
+  .kw { color: #c792ea; }
+  .str { color: #c3e88d; }
+  .num { color: #f78c6c; }
+  .fn { color: #82aaff; }
+  .cmt { color: #546e7a; font-style: italic; }
+  .op { color: #89ddff; }
+  .cls { color: var(--accent2); }
+
+  /* Divider between with/without */
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0;
+  }
+
+  .divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .divider span {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  /* Output */
+  .output-block {
+    background: rgba(106,247,192,0.05);
+    border: 1px solid rgba(106,247,192,0.15);
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--accent3);
+    margin-top: -10px;
+    margin-bottom: 14px;
+  }
+
+  .output-label {
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+
+  /* No results */
+  .no-results {
+    text-align: center;
+    padding: 60px;
+    color: var(--muted);
+    font-family: 'JetBrains Mono', monospace;
+    display: none;
+  }
+
+  /* Animations */
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .qa-card { animation-fill-mode: both; }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+  @media (max-width: 600px) {
+    .qa-header { padding: 16px; }
+    .qa-body { padding: 0 16px 16px; }
+    pre { padding: 14px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <div class="badge">// interview prep</div>
+    <h1>JavaScript<br>Fresher Q&A</h1>
+    <p>with & without built-in methods</p>
+  </header>
+
+  <div class="stats-bar">
+    <div class="stat">Questions: <span id="total-count">0</span></div>
+    <div class="stat">Shown: <span id="shown-count">0</span></div>
+    <div class="stat">Difficulty: <span>Fresher</span></div>
+  </div>
+
+  <div class="search-wrap">
+    <span class="search-icon">⌕</span>
+    <input type="text" id="search" placeholder="Search questions...">
+  </div>
+
+  <div class="filters" id="filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="Arrays">Arrays</button>
+    <button class="filter-btn" data-filter="Strings">Strings</button>
+    <button class="filter-btn" data-filter="Numbers">Numbers</button>
+    <button class="filter-btn" data-filter="Objects">Objects</button>
+    <button class="filter-btn" data-filter="Logic">Logic</button>
+    <button class="filter-btn" data-filter="Functions">Functions</button>
+  </div>
+
+  <div class="qa-list" id="qa-list"></div>
+  <div class="no-results" id="no-results">No questions match your search.</div>
+
+</div>
+
+<script>
+const questions = [
+  {
+    q: "Reverse a string",
+    topic: "Strings",
+    concept: "Strings are arrays of characters. You can either use built-in methods or iterate manually.",
+    withMethod: {
+      label: "Using .split(), .reverse(), .join()",
+      code: `<span class="kw">function</span> <span class="fn">reverseString</span>(str) {
+  <span class="kw">return</span> str.<span class="fn">split</span>(<span class="str">''</span>).<span class="fn">reverse</span>().<span class="fn">join</span>(<span class="str">''</span>);
+}
+
+<span class="fn">console</span>.<span class="fn">log</span>(<span class="fn">reverseString</span>(<span class="str">"hello"</span>)); <span class="cmt">// "olleh"</span>`,
+      output: '"olleh"'
+    },
+    withoutMethod: {
+      label: "Using a for loop",
+      code: `<span class="kw">function</span> <span class="fn">reverseString</span>(str) {
+  <span class="kw">let</span> result = <span class="str">""</span>;
+  <span class="kw">for</span> (<span class="kw">let</span> i = str.length - <span class="num">1</span>; i >= <span class="num">0</span>; i--) {
+    result += str[i];
+  }
+  <span class="kw">return</span> result;
+}
+
+<span class="fn">console</span>.<span class="fn">log</span>(<span class="fn">reverseString</span>(<span class="str">"hello"</span>)); <span class="cmt">// "olleh"</span>`,
+      output: '"olleh"'
+    }
+  },
+  {
+    q: "Check if a string is a palindrome",
+    topic: "Strings",
+    concept: "A palindrome reads the same forwards and backwards. Compare original to reversed.",
+    withMethod: {
+      label: "Using .split(), .reverse(), .join()",
+      code: `<span class="kw">function</span> <span class="fn">isPalindrome</span>(str) {
+  <span class="kw">const</span> reversed = str.<span class="fn">split</span>(<span class="str">''</span>).<span class="fn">reverse</span>().<span class="fn">join</span>(<span class="str">''</span>);
+  <span class="kw">return</span> str === reversed;
+}
+
+<span class="fn">console</span>.<span class="fn">log</span>(<span class="fn">isPalindrome</span>(<span class="str">"racecar"</span>)); <span class="cmt">// true</span>
+<span class="fn">console</span>.<span class="fn">log</span>(<span class="fn">isPalindrome</span>(<span class="str">"hello"</span>));   <span class="cmt">// false</span>`,
+      output: 'true, false'
+    },
+    withoutMethod: {
+      label: "Using two-pointer approach",
+      code: `<span class="kw">function</span> <span class="fn">isPalindrome</span>(str) {
+  <span class="kw">let</span> left = <span class="num">0</span>, right = str.length - <span class="num">1</span>;
+  <span class="kw">while</span> (left < right) {
+    <span class="kw">if</span> (str[left] !== str[right]) <span class="kw">return false</span>;
+    left++;
+    right--;
+  }
+  <span class="kw">return true</span>;
+}
+
+<span class="fn">console</span>.<span class="fn">log</span>(<span class="fn">isPalindrome</span>(<span class="str">"racecar"</span>)); <span class="cmt">// true</span>`,
+      output: 'true'
+    }
+  },
+  {
+    q: "Find the largest number in an array",
+    topic: "Arrays",
+    concept: "Iterate through the array and track the maximum value encountered.",
+    withMethod: {
+      label: "Using Math.max() and spread operator",
+      code: `<span class="kw">function</span> <span class="fn">findMax</span>(arr) {
+  <span class="kw">return</span> <span class="cls">Math</span>.<span class="fn">max</span>(...arr);
+}
+
+<span class="fn">console</span>.<span class="fn">log</span>(<span class="fn">findMax</span>([<span class="num">3</span>, <span class="num">1</span>, <span class="num">9</span>, <span class="num">4</span>, <span class="num">5</span>])); <span class="cmt">// 9</span>`,
+      output: '9'
+    },
+    withoutMethod: {
+      label: "Using a for loop",
+      code: `<span class="kw">function</span> <span class="fn">findMax</span>(arr) {
+  <span class="kw">let</span> max = arr[<span class="num">0</span>];
+  <span class="kw">for</span> (<span class="kw">let</span> i = <span class="num">1</span>; i < arr.length; i++) {
+    <span class="kw">if</span> (arr[i] > max) max = arr[i];
+  }
+  <span class="kw">return</span> max;
+}
+
+<span class="fn">console</span>.<span class="fn">log</span>(<span class="fn">findMax</span>([<span class="num">3</span>, <span class="num">1</span>, <span class="num">9</span>, <span class="num">4</span>, <span class="num">5</span>])); <span class="cmt">// 9</span>`,
+      output: '9'
+    }
+  },
+  {
+    q: "Count occurrences of each character in a string",
+    topic: "Strings",
+    concept: "Use an object as a frequency map — each character is a key, its count is the value.",
+    withMethod: {
+      label: "Using reduce()",
+      code: `<span class="kw">function</span> <span class="fn">charCount</span>(str) {
+  <span class="kw">return</span> [...str].<span class="fn">reduce</span>((acc, char) => {
+    acc[char] = (acc[char] || <span class="num">0</span>) + <span class="num">1</span>;
+    <span class="kw">return</span> acc;
+  }, {});
+}
+
+<span class="fn">console</span>.<span class="fn">log</span>(<span class="fn">charCount</span>(<span class="str">"hello"</span>));`,
+      output: '{ h: 1, e: 1, l: 2, o: 1 }'
+    },
+    withoutMethod: {
+      label: "Using a for loop and plain object",
+      code: `<span class="kw">function</span> <span class="fn">charCount</span>(str) {
+  <span class="kw">const</span> map = {};
+  <span class="kw">for</span> (<span class="kw">let</span> i = <span class="num">0</span>; i < str.length; i++) {
+    <span class="kw">const</span> ch = str[i];
+    map[ch] = map[ch] ? map[ch] + <span class="num">1</span> : <span class="num">1</span>;
+  }
+  <span class="kw">return</span> map;
+}
+
+<span class="fn">console</span>.<span class="fn">log</span>(<span class="fn">charCount</span>(<span class="str">"hello"</span>));`,
+      output: '{ h: 1, e: 1, l: 2, o: 1 }'
+    }
+  },
+  {
+    q: "Remove duplicates from an array",
+    topic: "Arrays",
+    concept: "Duplicates can be removed using Set (unique values only) or by checking if a value already exists.",
+    withMethod: {
+      label: "Using Set",
+      code: `<span class="kw">function</span> <span class="fn">removeDuplicates</span>(arr) {
+  <span class="kw">return</span> [...<span class="kw">new</span> <span class="cls">Set</span>(arr)];
+}
+
+<span class="fn">console</span>.<span class="fn">log</span>(<span class="fn">removeDuplicates</span>([<span class="num">1</span>, <span class="num">2</span>, <span class="num">2</span>, <span class="num">3</span>, <span class="num">3</span>, <span class="num">4</span>]));`,
+      output: '[1, 2, 3, 4]'
+    },
+    withoutMethod: {
+      label: "Using indexOf check",
+      code: `<span class="kw">function</span> <span class="fn">removeDuplicates</span>(arr) {
+  <span class="kw">const</span> result = [];
+  <span class="kw">for</span> (<span class="kw">let</span> i = <span class="num">0</span>; i < arr.length; i++) {
+    <span class="kw">if</span> (result.indexOf(arr[i]) === -<span class="num">1</span>) {
+      result.<span class="fn">push</span>(arr[i]);
+    }
+  }
+  <span class="kw">return</span> result;
+}
+
+<span class="fn">console</span>.<span class="fn">log</span>(<span class="fn">removeDuplicates</span>([<span class="num">1</span>, <span class="num">2</span>, <span class="num">2</span>, <span class="num">3</span>, <span class="num">3</span>, <span class="num">4</span>]));`,
+      output: '[1, 2, 3, 4]'
+    }
+  },
+  {
+    q: "Check if a number is prime",
+    topic: "Numbers",
+    concept: "A prime number is divisible only by 1 and itself. Check divisibility up to its square root for efficiency.",
+    withMethod: {
+      label: "Using Array.from() and .every()",
+      code: `<span class="kw">function</span> <span class="fn">isPrime</span>(n) {
+  <span class="kw">if</span> (n < <span class="num">2</span>) <span class="kw">return false</span>;
+  <span class="kw">return</span> <span class="cls">Array</span>.<span class="fn">from</span>({length: n - <span class="num">2</span>}, (_, i) => i + <span class="num">2</span>)
+    .<span class="fn">every</span>(i => n % i !== <span class="num">0</span>);
+}
+
+<span class="fn">console</span>.<span class="fn">log</span>(<span class="fn">isPrime</span>(<span class="num">7</span>));  <span class="cmt">// true</span>
+<span class="fn">console</span>.<span class="fn">log</span>(<span class="fn">isPrime</span>(<span class="num">10</span>)); <span class="cmt">// false</span>`,
+      output: 'true, false'
+    },
+    withoutMethod: {
+      label: "Using a for loop (optimized with sqrt)",
+      code: `<span class="kw">function</span> <span class="fn">isPrime</span>(n) {
+  <span class="kw">if</span> (n < <span class="num">2</span>) <span class="kw">return false</span>;
+  <span class="kw">for</span> (<span class="kw">let</span> i = <span class="num">2</span>; i <= <span class="cls">Math</span>.<span class="fn">sqrt</span>(n); i++) {
+    <span class="kw">if</span> (n % i === <span class="num">0</span>) <span class="kw">return false</span>;
+  }
+  <span class="kw">return true</span>;
+}
+
+<span class="fn">console</span>.<span class="fn">log</span>(<span class="fn">isPrime</span>(<span class="num">7</span>));  <span class="cmt">// true</span>`,
+      output: 'true'
+    }
+  },
+  {
+    q: "Flatten a nested array",
+    topic: "Arrays",
+    concept: "Flattening means converting [[1,[2]],3] into [1,2,3]. Recursion or flat() can handle multiple levels.",
+    withMethod: {
+      label: "Using Array.flat(Infinity)",
+      code: `<span class="kw">function</span> <span class="fn">flattenArray</span>(arr) {
+  <span class="kw">return</span> arr.<span class="fn">flat</span>(<span class="cls">Infinity</span>);
+}
+
+<span class="fn">console</span>.<span class="fn">log</span>(<span class="fn">flattenArray</span>([<span class="num">1</span>, [<span class="num">2</span>, [<span class="num">3</span>, [<span class="num">4</span>]]]]));`,
+      output: '[1, 2, 3, 4]'
+    },
+    withoutMethod: {
+      label: "Using recursion",
+      code: `<span class="kw">function</span> <span class="fn">flattenArray</span>(arr) {
+  <span class="kw">let</span> result = [];
+  <span class="kw">for</span> (<span class="kw">let</span> i = <span class="num">0</span>; i < arr.length; i++) {
+    <span class="kw">if</span> (<span class="cls">Array</span>.<span class="fn">isArray</span>(arr[i])) {
+      result = result.<span class="fn">concat</span>(<span class="fn">flattenArray</span>(arr[i]));
+    } <span class="kw">else</span> {
+      result.<span class="fn">push</span>(arr[i]);
+    }
+  }
+  <span class="kw">return</span> result;
+}
+
+<span class="fn">console</span>.<span class="fn">log</span>(<span class="fn">flattenArray</span>([<span class="num">1</span>, [<span class="num">2</span>, [<span class="num">3</span>, [<span class="num">4</span>]]]]));`,
+      output: '[1, 2, 3, 4]'
+    }
+  },
+  {
+    q: "Find the factorial of a number",
+    topic: "Numbers",
+    concept: "Factorial of n = n * (n-1) * ... * 1. Both recursion and iteration work well here.",
+    withMethod: {
+      label: "Using Array.from() and reduce()",
+      code: `<span class="kw">function</span> <span class="fn">factorial</span>(n) {
+  <span class="kw">if</span> (n === <span class="num">0</span>) <span class="kw">return</span> <span class="num">1</span>;
+  <span class="kw">return</span> <span class="cls">Array</span>.<span class="fn">from</span>({length: n}, (_, i) => i + <span class="num">1</span>)
+         .<span class="fn">reduce</span>((acc, val) => acc * val, <span class="num">1</span>);
+}
+
+<span class="fn">console</span>.<span class="fn">log</span>(<span class="fn">factorial</span>(<span class="num">5</span>)); <span class="cmt">// 120</span>`,
+      output: '120'
+    },
+    withoutMethod: {
+      label: "Using recursion",
+      code: `<span class="kw">function</span> <span class="fn">factorial</span>(n) {
+  <span class="kw">if</span> (n === <span class="num">0</span> || n === <span class="num">1</span>) <span class="kw">return</span> <span class="num">1</span>;
+  <span class="kw">return</span> n * <span class="fn">factorial</span>(n - <span class="num">1</span>);
+}
+
+<span class="fn">console</span>.<span class="fn">log</span>(<span class="fn">factorial</span>(<span class="num">5</span>)); <span class="cmt">// 120</span>`,
+      output: '120'
+    }
+  },
+  {
+    q: "Find all anagrams in an array of strings",
+    topic: "Strings",
+    concept: "Two strings are anagrams if they contain the same characters. Sort each string and compare.",
+    withMethod: {
+      label: "Using sort() and filter()",
+      code: `<span class="kw">function</span> <span class="fn">findAnagrams</span>(target, arr) {
+  <span class="kw">const</span> sorted = target.<span class="fn">split</span>(<span class="str">''</span>).<span class="fn">sort</span>().<span class="fn">join</span>(<span class="str">''</span>);
+  <span class="kw">return</span> arr.<span class="fn">filter</span>(word =>
+    word.<span class="fn">split</span>(<span class="str">''</span>).<span class="fn">sort</span>().<span class="fn">join</span>(<span class="str">''</span>) === sorted
+  );
+}
+
+<span class="fn">console</span>.<span class="fn">log</span>(<span class="fn">findAnagrams</span>(<span class="str">"cat"</span>, [<span class="str">"act"</span>, <span class="str">"dog"</span>, <span class="str">"tac"</span>, <span class="str">"pig"</span>]));`,
+      output: '["act", "tac"]'
+    },
+    withoutMethod: {
+      label: "Using character frequency map",
+      code: `<span class="kw">function</span> <span class="fn">buildMap</span>(str) {
+  <span class="kw">const</span> map = {};
+  <span class="kw">for</span> (<span class="kw">let</span> c <span class="kw">of</span> str) map[c] = (map[c] || <span class="num">0</span>) + <span class="num">1</span>;
+  <span class="kw">return</span> <span class="cls">JSON</span>.<span class="fn">stringify</span>(map);
+}
+
+<span class="kw">function</span> <span class="fn">findAnagrams</span>(target, arr) {
+  <span class="kw">const</span> targetMap = <span class="fn">buildMap</span>(target);
+  <span class="kw">const</span> result = [];
+  <span class="kw">for</span> (<span class="kw">let</span> word <span class="kw">of</span> arr) {
+    <span class="kw">if</span> (<span class="fn">buildMap</span>(word) === targetMap) result.<span class="fn">push</span>(word);
+  }
+  <span class="kw">return</span> result;
+}`,
+      output: '["act", "tac"]'
+    }
+  },
+  {
+    q: "Merge two sorted arrays",
+    topic: "Arrays",
+    concept: "Compare elements from both arrays one by one and pick the smaller one each time.",
+    withMethod: {
+      label: "Using concat() and sort()",
+      code: `<span class="kw">function</span> <span class="fn">mergeSorted</span>(a, b) {
+  <span class="kw">return</span> a.<span class="fn">concat</span>(b).<span class="fn">sort</span>((x, y) => x - y);
+}
+
+<span class="fn">console</span>.<span class="fn">log</span>(<span class="fn">mergeSorted</span>([<span class="num">1</span>,<span class="num">3</span>,<span class="num">5</span>], [<span class="num">2</span>,<span class="num">4</span>,<span class="num">6</span>]));`,
+      output: '[1, 2, 3, 4, 5, 6]'
+    },
+    withoutMethod: {
+      label: "Using two-pointer merge",
+      code: `<span class="kw">function</span> <span class="fn">mergeSorted</span>(a, b) {
+  <span class="kw">const</span> result = [];
+  <span class="kw">let</span> i = <span class="num">0</span>, j = <span class="num">0</span>;
+  <span class="kw">while</span> (i < a.length && j < b.length) {
+    <span class="kw">if</span> (a[i] < b[j]) result.<span class="fn">push</span>(a[i++]);
+    <span class="kw">else</span> result.<span class="fn">push</span>(b[j++]);
+  }
+  <span class="kw">while</span> (i < a.length) result.<span class="fn">push</span>(a[i++]);
+  <span class="kw">while</span> (j < b.length) result.<span class="fn">push</span>(b[j++]);
+  <span class="kw">return</span> result;
+}`,
+      output: '[1, 2, 3, 4, 5, 6]'
+    }
+  },
+  {
+    q: "Find the sum of all array elements",
+    topic: "Arrays",
+    concept: "Accumulate values either with reduce() or a simple running total in a loop.",
+    withMethod: {
+      label: "Using Array.reduce()",
+      code: `<span class="kw">function</span> <span class="fn">arraySum</span>(arr) {
+  <span class="kw">return</span> arr.<span class="fn">reduce</span>((sum, val) => sum + val, <span class="num">0</span>);
+}
+
+<span class="fn">console</span>.<span class="fn">log</span>(<span class="fn">arraySum</span>([<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>, <span class="num">4</span>, <span class="num">5</span>])); <span class="cmt">// 15</span>`,
+      output: '15'
+    },
+    withoutMethod: {
+      label: "Using a for loop",
+      code: `<span class="kw">function</span> <span class="fn">arraySum</span>(arr) {
+  <span class="kw">let</span> sum = <span class="num">0</span>;
+  <span class="kw">for</span> (<span class="kw">let</span> i = <span class="num">0</span>; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  <span class="kw">return</span> sum;
+}
+
+<span class="fn">console</span>.<span class="fn">log</span>(<span class="fn">arraySum</span>([<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>, <span class="num">4</span>, <span class="num">5</span>])); <span class="cmt">// 15</span>`,
+      output: '15'
+    }
+  },
+  {
+    q: "Count vowels in a string",
+    topic: "Strings",
+    concept: "Check each character against the set of vowels (a, e, i, o, u) and count matches.",
+    withMethod: {
+      label: "Using match() with regex",
+      code: `<span class="kw">function</span> <span class="fn">countVowels</span>(str) {
+  <span class="kw">const</span> matches = str.<span class="fn">match</span>(<span class="op">/[aeiou]/gi</span>);
+  <span class="kw">return</span> matches ? matches.length : <span class="num">0</span>;
+}
+
+<span class="fn">console</span>.<span class="fn">log</span>(<span class="fn">countVowels</span>(<span class="str">"Hello World"</span>)); <span class="cmt">// 3</span>`,
+      output: '3'
+    },
+    withoutMethod: {
+      label: "Using a for loop with indexOf",
+      code: `<span class="kw">function</span> <span class="fn">countVowels</span>(str) {
+  <span class="kw">const</span> vowels = <span class="str">"aeiouAEIOU"</span>;
+  <span class="kw">let</span> count = <span class="num">0</span>;
+  <span class="kw">for</span> (<span class="kw">let</span> i = <span class="num">0</span>; i < str.length; i++) {
+    <span class="kw">if</span> (vowels.indexOf(str[i]) !== -<span class="num">1</span>) count++;
+  }
+  <span class="kw">return</span> count;
+}
+
+<span class="fn">console</span>.<span class="fn">log</span>(<span class="fn">countVowels</span>(<span class="str">"Hello World"</span>)); <span class="cmt">// 3</span>`,
+      output: '3'
+    }
+  },
+  {
+    q: "Deep clone an object",
+    topic: "Objects",
+    concept: "A deep clone creates a fully independent copy — changes to the clone don't affect the original.",
+    withMethod: {
+      label: "Using JSON.parse(JSON.stringify())",
+      code: `<span class="kw">function</span> <span class="fn">deepClone</span>(obj) {
+  <span class="kw">return</span> <span class="cls">JSON</span>.<span class="fn">parse</span>(<span class="cls">JSON</span>.<span class="fn">stringify</span>(obj));
+}
+
+<span class="kw">const</span> original = { a: <span class="num">1</span>, b: { c: <span class="num">2</span> } };
+<span class="kw">const</span> clone = <span class="fn">deepClone</span>(original);
+clone.b.c = <span class="num">99</span>;
+<span class="fn">console</span>.<span class="fn">log</span>(original.b.c); <span class="cmt">// 2 (unchanged)</span>`,
+      output: '2'
+    },
+    withoutMethod: {
+      label: "Using recursion",
+      code: `<span class="kw">function</span> <span class="fn">deepClone</span>(obj) {
+  <span class="kw">if</span> (obj === <span class="kw">null</span> || <span class="kw">typeof</span> obj !== <span class="str">'object'</span>) <span class="kw">return</span> obj;
+  <span class="kw">const</span> clone = <span class="cls">Array</span>.<span class="fn">isArray</span>(obj) ? [] : {};
+  <span class="kw">for</span> (<span class="kw">let</span> key <span class="kw">in</span> obj) {
+    <span class="kw">if</span> (obj.<span class="fn">hasOwnProperty</span>(key)) {
+      clone[key] = <span class="fn">deepClone</span>(obj[key]);
+    }
+  }
+  <span class="kw">return</span> clone;
+}`,
+      output: '2 (original unchanged)'
+    }
+  },
+  {
+    q: "Get unique values from two arrays (union)",
+    topic: "Arrays",
+    concept: "Union = all unique values from both arrays combined with no duplicates.",
+    withMethod: {
+      label: "Using Set and spread",
+      code: `<span class="kw">function</span> <span class="fn">union</span>(a, b) {
+  <span class="kw">return</span> [...<span class="kw">new</span> <span class="cls">Set</span>([...a, ...b])];
+}
+
+<span class="fn">console</span>.<span class="fn">log</span>(<span class="fn">union</span>([<span class="num">1</span>,<span class="num">2</span>,<span class="num">3</span>], [<span class="num">2</span>,<span class="num">3</span>,<span class="num">4</span>]));`,
+      output: '[1, 2, 3, 4]'
+    },
+    withoutMethod: {
+      label: "Using nested loops",
+      code: `<span class="kw">function</span> <span class="fn">union</span>(a, b) {
+  <span class="kw">const</span> result = [...a];
+  <span class="kw">for</span> (<span class="kw">let</span> i = <span class="num">0</span>; i < b.length; i++) {
+    <span class="kw">let</span> found = <span class="kw">false</span>;
+    <span class="kw">for</span> (<span class="kw">let</span> j = <span class="num">0</span>; j < result.length; j++) {
+      <span class="kw">if</span> (result[j] === b[i]) { found = <span class="kw">true</span>; <span class="kw">break</span>; }
+    }
+    <span class="kw">if</span> (!found) result.<span class="fn">push</span>(b[i]);
+  }
+  <span class="kw">return</span> result;
+}`,
+      output: '[1, 2, 3, 4]'
+    }
+  },
+  {
+    q: "Capitalize the first letter of each word",
+    topic: "Strings",
+    concept: "Split the sentence into words, uppercase the first letter of each, then rejoin.",
+    withMethod: {
+      label: "Using split(), map(), join()",
+      code: `<span class="kw">function</span> <span class="fn">titleCase</span>(str) {
+  <span class="kw">return</span> str
+    .<span class="fn">split</span>(<span class="str">' '</span>)
+    .<span class="fn">map</span>(word => word.<span class="fn">charAt</span>(<span class="num">0</span>).<span class="fn">toUpperCase</span>() + word.<span class="fn">slice</span>(<span class="num">1</span>))
+    .<span class="fn">join</span>(<span class="str">' '</span>);
+}
+
+<span class="fn">console</span>.<span class="fn">log</span>(<span class="fn">titleCase</span>(<span class="str">"hello world"</span>));`,
+      output: '"Hello World"'
+    },
+    withoutMethod: {
+      label: "Using a for loop",
+      code: `<span class="kw">function</span> <span class="fn">titleCase</span>(str) {
+  <span class="kw">let</span> result = <span class="str">""</span>;
+  <span class="kw">let</span> capitalize = <span class="kw">true</span>;
+  <span class="kw">for</span> (<span class="kw">let</span> i = <span class="num">0</span>; i < str.length; i++) {
+    <span class="kw">if</span> (str[i] === <span class="str">' '</span>) { capitalize = <span class="kw">true</span>; result += <span class="str">' '</span>; }
+    <span class="kw">else if</span> (capitalize) {
+      result += str[i].<span class="fn">toUpperCase</span>();
+      capitalize = <span class="kw">false</span>;
+    } <span class="kw">else</span> { result += str[i]; }
+  }
+  <span class="kw">return</span> result;
+}`,
+      output: '"Hello World"'
+    }
+  },
+  {
+    q: "Fibonacci sequence up to N terms",
+    topic: "Numbers",
+    concept: "Each Fibonacci number is the sum of the two before it: 0, 1, 1, 2, 3, 5, 8...",
+    withMethod: {
+      label: "Using Array.from()",
+      code: `<span class="kw">function</span> <span class="fn">fibonacci</span>(n) {
+  <span class="kw">return</span> <span class="cls">Array</span>.<span class="fn">from</span>({length: n}, (_, i) => {
+    <span class="kw">if</span> (i === <span class="num">0</span>) <span class="kw">return</span> <span class="num">0</span>;
+    <span class="kw">if</span> (i === <span class="num">1</span>) <span class="kw">return</span> <span class="num">1</span>;
+    <span class="kw">let</span> a = <span class="num">0</span>, b = <span class="num">1</span>;
+    <span class="kw">for</span> (<span class="kw">let</span> j = <span class="num">2</span>; j <= i; j++) [a, b] = [b, a + b];
+    <span class="kw">return</span> b;
+  });
+}
+
+<span class="fn">console</span>.<span class="fn">log</span>(<span class="fn">fibonacci</span>(<span class="num">7</span>));`,
+      output: '[0, 1, 1, 2, 3, 5, 8]'
+    },
+    withoutMethod: {
+      label: "Using a while loop",
+      code: `<span class="kw">function</span> <span class="fn">fibonacci</span>(n) {
+  <span class="kw">const</span> result = [];
+  <span class="kw">let</span> a = <span class="num">0</span>, b = <span class="num">1</span>;
+  <span class="kw">while</span> (result.length < n) {
+    result.<span class="fn">push</span>(a);
+    [a, b] = [b, a + b];
+  }
+  <span class="kw">return</span> result;
+}
+
+<span class="fn">console</span>.<span class="fn">log</span>(<span class="fn">fibonacci</span>(<span class="num">7</span>));`,
+      output: '[0, 1, 1, 2, 3, 5, 8]'
+    }
+  },
+  {
+    q: "Check if two objects are equal",
+    topic: "Objects",
+    concept: "Objects can't be compared with === directly. You must compare all key-value pairs recursively.",
+    withMethod: {
+      label: "Using JSON.stringify() (shallow comparison)",
+      code: `<span class="kw">function</span> <span class="fn">isEqual</span>(obj1, obj2) {
+  <span class="kw">return</span> <span class="cls">JSON</span>.<span class="fn">stringify</span>(obj1) === <span class="cls">JSON</span>.<span class="fn">stringify</span>(obj2);
+}
+
+<span class="fn">console</span>.<span class="fn">log</span>(<span class="fn">isEqual</span>({a:<span class="num">1</span>, b:<span class="num">2</span>}, {a:<span class="num">1</span>, b:<span class="num">2</span>})); <span class="cmt">// true</span>
+<span class="fn">console</span>.<span class="fn">log</span>(<span class="fn">isEqual</span>({a:<span class="num">1</span>}, {a:<span class="num">2</span>}));         <span class="cmt">// false</span>`,
+      output: 'true, false'
+    },
+    withoutMethod: {
+      label: "Using deep recursive comparison",
+      code: `<span class="kw">function</span> <span class="fn">isEqual</span>(a, b) {
+  <span class="kw">if</span> (<span class="kw">typeof</span> a !== <span class="kw">typeof</span> b) <span class="kw">return false</span>;
+  <span class="kw">if</span> (<span class="kw">typeof</span> a !== <span class="str">'object'</span> || a === <span class="kw">null</span>) <span class="kw">return</span> a === b;
+  <span class="kw">const</span> keysA = <span class="cls">Object</span>.<span class="fn">keys</span>(a);
+  <span class="kw">const</span> keysB = <span class="cls">Object</span>.<span class="fn">keys</span>(b);
+  <span class="kw">if</span> (keysA.length !== keysB.length) <span class="kw">return false</span>;
+  <span class="kw">return</span> keysA.<span class="fn">every</span>(key => <span class="fn">isEqual</span>(a[key], b[key]));
+}`,
+      output: 'true, false'
+    }
+  },
+  {
+    q: "Implement a debounce function",
+    topic: "Functions",
+    concept: "Debounce delays a function call until after a period of inactivity — great for search inputs.",
+    withMethod: {
+      label: "Using closures and setTimeout",
+      code: `<span class="kw">function</span> <span class="fn">debounce</span>(fn, delay) {
+  <span class="kw">let</span> timer;
+  <span class="kw">return function</span>(...args) {
+    <span class="fn">clearTimeout</span>(timer);
+    timer = <span class="fn">setTimeout</span>(() => {
+      fn.<span class="fn">apply</span>(<span class="kw">this</span>, args);
+    }, delay);
+  };
+}
+
+<span class="kw">const</span> search = <span class="fn">debounce</span>((q) => <span class="fn">console</span>.<span class="fn">log</span>(<span class="str">"Searching:"</span>, q), <span class="num">300</span>);`,
+      output: '// Fires 300ms after last call'
+    },
+    withoutMethod: {
+      label: "Manual timer tracking",
+      code: `<span class="kw">function</span> <span class="fn">debounce</span>(fn, delay) {
+  <span class="kw">let</span> timerId = <span class="kw">null</span>;
+  <span class="kw">return function</span>() {
+    <span class="kw">const</span> context = <span class="kw">this</span>;
+    <span class="kw">const</span> args = arguments;
+    <span class="kw">if</span> (timerId !== <span class="kw">null</span>) {
+      <span class="fn">clearTimeout</span>(timerId);
+    }
+    timerId = <span class="fn">setTimeout</span>(<span class="kw">function</span>() {
+      fn.<span class="fn">apply</span>(context, args);
+      timerId = <span class="kw">null</span>;
+    }, delay);
+  };
+}`,
+      output: '// Same behavior, explicit timer tracking'
+    }
+  },
+  {
+    q: "Find the intersection of two arrays",
+    topic: "Arrays",
+    concept: "Intersection = elements present in both arrays. Filter one array checking against the other.",
+    withMethod: {
+      label: "Using filter() and includes()",
+      code: `<span class="kw">function</span> <span class="fn">intersection</span>(a, b) {
+  <span class="kw">return</span> a.<span class="fn">filter</span>(val => b.<span class="fn">includes</span>(val));
+}
+
+<span class="fn">console</span>.<span class="fn">log</span>(<span class="fn">intersection</span>([<span class="num">1</span>,<span class="num">2</span>,<span class="num">3</span>,<span class="num">4</span>], [<span class="num">2</span>,<span class="num">4</span>,<span class="num">6</span>]));`,
+      output: '[2, 4]'
+    },
+    withoutMethod: {
+      label: "Using nested loops",
+      code: `<span class="kw">function</span> <span class="fn">intersection</span>(a, b) {
+  <span class="kw">const</span> result = [];
+  <span class="kw">for</span> (<span class="kw">let</span> i = <span class="num">0</span>; i < a.length; i++) {
+    <span class="kw">for</span> (<span class="kw">let</span> j = <span class="num">0</span>; j < b.length; j++) {
+      <span class="kw">if</span> (a[i] === b[j]) {
+        result.<span class="fn">push</span>(a[i]);
+        <span class="kw">break</span>;
+      }
+    }
+  }
+  <span class="kw">return</span> result;
+}`,
+      output: '[2, 4]'
+    }
+  },
+  {
+    q: "Implement Array.map() from scratch",
+    topic: "Functions",
+    concept: "map() creates a new array by transforming each element using a callback function.",
+    withMethod: {
+      label: "Using native Array.map()",
+      code: `<span class="kw">const</span> nums = [<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>, <span class="num">4</span>];
+<span class="kw">const</span> doubled = nums.<span class="fn">map</span>(n => n * <span class="num">2</span>);
+<span class="fn">console</span>.<span class="fn">log</span>(doubled);`,
+      output: '[2, 4, 6, 8]'
+    },
+    withoutMethod: {
+      label: "Implementing map() manually",
+      code: `<span class="kw">function</span> <span class="fn">myMap</span>(arr, callback) {
+  <span class="kw">const</span> result = [];
+  <span class="kw">for</span> (<span class="kw">let</span> i = <span class="num">0</span>; i < arr.length; i++) {
+    result.<span class="fn">push</span>(<span class="fn">callback</span>(arr[i], i, arr));
+  }
+  <span class="kw">return</span> result;
+}
+
+<span class="kw">const</span> doubled = <span class="fn">myMap</span>([<span class="num">1</span>,<span class="num">2</span>,<span class="num">3</span>,<span class="num">4</span>], n => n * <span class="num">2</span>);
+<span class="fn">console</span>.<span class="fn">log</span>(doubled);`,
+      output: '[2, 4, 6, 8]'
+    }
+  },
+  {
+    q: "Sort an array of objects by a property",
+    topic: "Objects",
+    concept: "Use a comparator function to tell sort() how to compare objects by a specific key.",
+    withMethod: {
+      label: "Using Array.sort() with comparator",
+      code: `<span class="kw">const</span> people = [
+  { name: <span class="str">"Alice"</span>, age: <span class="num">30</span> },
+  { name: <span class="str">"Bob"</span>, age: <span class="num">25</span> },
+  { name: <span class="str">"Carol"</span>, age: <span class="num">35</span> }
+];
+
+<span class="kw">const</span> sorted = people.<span class="fn">sort</span>((a, b) => a.age - b.age);
+<span class="fn">console</span>.<span class="fn">log</span>(sorted.<span class="fn">map</span>(p => p.name));`,
+      output: '["Bob", "Alice", "Carol"]'
+    },
+    withoutMethod: {
+      label: "Using bubble sort on objects",
+      code: `<span class="kw">function</span> <span class="fn">sortByAge</span>(arr) {
+  <span class="kw">const</span> a = [...arr];
+  <span class="kw">for</span> (<span class="kw">let</span> i = <span class="num">0</span>; i < a.length; i++) {
+    <span class="kw">for</span> (<span class="kw">let</span> j = <span class="num">0</span>; j < a.length - i - <span class="num">1</span>; j++) {
+      <span class="kw">if</span> (a[j].age > a[j+<span class="num">1</span>].age) {
+        [a[j], a[j+<span class="num">1</span>]] = [a[j+<span class="num">1</span>], a[j]];
+      }
+    }
+  }
+  <span class="kw">return</span> a;
+}`,
+      output: '["Bob", "Alice", "Carol"]'
+    }
+  },
+  {
+    q: "Check if a value is a number (not NaN)",
+    topic: "Logic",
+    concept: "NaN is the only value in JS not equal to itself. Use isNaN() or the identity trick.",
+    withMethod: {
+      label: "Using Number.isFinite() and isNaN()",
+      code: `<span class="kw">function</span> <span class="fn">isValidNumber</span>(val) {
+  <span class="kw">return</span> <span class="kw">typeof</span> val === <span class="str">'number'</span> && !<span class="fn">isNaN</span>(val);
+}
+
+<span class="fn">console</span>.<span class="fn">log</span>(<span class="fn">isValidNumber</span>(<span class="num">42</span>));    <span class="cmt">// true</span>
+<span class="fn">console</span>.<span class="fn">log</span>(<span class="fn">isValidNumber</span>(<span class="cls">NaN</span>));   <span class="cmt">// false</span>
+<span class="fn">console</span>.<span class="fn">log</span>(<span class="fn">isValidNumber</span>(<span class="str">"42"</span>));  <span class="cmt">// false</span>`,
+      output: 'true, false, false'
+    },
+    withoutMethod: {
+      label: "Using NaN self-inequality trick",
+      code: `<span class="kw">function</span> <span class="fn">isValidNumber</span>(val) {
+  <span class="cmt">// NaN is the ONLY value not equal to itself</span>
+  <span class="kw">return</span> <span class="kw">typeof</span> val === <span class="str">'number'</span> && val === val;
+}
+
+<span class="fn">console</span>.<span class="fn">log</span>(<span class="fn">isValidNumber</span>(<span class="num">42</span>));   <span class="cmt">// true</span>
+<span class="fn">console</span>.<span class="fn">log</span>(<span class="fn">isValidNumber</span>(<span class="cls">NaN</span>));  <span class="cmt">// false</span>`,
+      output: 'true, false'
+    }
+  }
+];
+
+// Render
+function renderQuestions(filtered) {
+  const list = document.getElementById('qa-list');
+  const noRes = document.getElementById('no-results');
+  list.innerHTML = '';
+
+  if (filtered.length === 0) {
+    noRes.style.display = 'block';
+    document.getElementById('shown-count').textContent = 0;
+    return;
+  }
+  noRes.style.display = 'none';
+  document.getElementById('shown-count').textContent = filtered.length;
+
+  filtered.forEach((item, idx) => {
+    const card = document.createElement('div');
+    card.className = 'qa-card';
+    card.style.animationDelay = `${idx * 0.04}s`;
+    card.innerHTML = `
+      <div class="qa-header" onclick="toggle(this)">
+        <div class="q-num">Q${String(idx+1).padStart(2,'0')}</div>
+        <div class="q-text">${item.q}</div>
+        <div class="q-toggle">+</div>
+      </div>
+      <div class="qa-body">
+        <div class="category-chips">
+          <span class="chip topic">${item.topic}</span>
+          <span class="chip with-method">✓ With Method</span>
+          <span class="chip without-method">✗ Without Method</span>
+        </div>
+        <div class="answer-block">
+          <div class="answer-label concept">Concept</div>
+          <div class="explanation">${item.concept}</div>
+        </div>
+        <div class="divider"><span>with built-in method</span></div>
+        <div class="answer-block">
+          <div class="answer-label with">${item.withMethod.label}</div>
+          <pre><button class="copy-btn" onclick="copyCode(this)">COPY</button><code>${item.withMethod.code}</code></pre>
+          <div class="output-block"><div class="output-label">OUTPUT</div>${item.withMethod.output}</div>
+        </div>
+        <div class="divider"><span>without built-in method</span></div>
+        <div class="answer-block">
+          <div class="answer-label without">${item.withoutMethod.label}</div>
+          <pre><button class="copy-btn" onclick="copyCode(this)">COPY</button><code>${item.withoutMethod.code}</code></pre>
+          <div class="output-block"><div class="output-label">OUTPUT</div>${item.withoutMethod.output}</div>
+        </div>
+      </div>
+    `;
+    list.appendChild(card);
+  });
+}
+
+function toggle(header) {
+  const card = header.parentElement;
+  card.classList.toggle('open');
+}
+
+function copyCode(btn) {
+  const code = btn.nextElementSibling.innerText;
+  navigator.clipboard.writeText(code).then(() => {
+    btn.textContent = 'COPIED!';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = 'COPY'; btn.classList.remove('copied'); }, 2000);
+  });
+}
+
+// Filter & search
+let currentFilter = 'all';
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentFilter = btn.dataset.filter;
+    applyFilters();
+  });
+});
+
+document.getElementById('search').addEventListener('input', applyFilters);
+
+function applyFilters() {
+  const query = document.getElementById('search').value.toLowerCase();
+  const filtered = questions.filter(q => {
+    const matchTopic = currentFilter === 'all' || q.topic === currentFilter;
+    const matchSearch = q.q.toLowerCase().includes(query) || q.topic.toLowerCase().includes(query);
+    return matchTopic && matchSearch;
+  });
+  renderQuestions(filtered);
+}
+
+document.getElementById('total-count').textContent = questions.length;
+renderQuestions(questions);
+document.getElementById('shown-count').textContent = questions.length;
+</script>
+</body>
+</html>
