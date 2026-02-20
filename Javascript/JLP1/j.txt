@@ -1,0 +1,134 @@
+Script started on 2026-02-20 11:44:35+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="64" LINES="18"]
+]0;uday@uday: ~/practice/Javascript/JLP1[01;32muday@uday[00m:[01;34m~/practice/Javascript/JLP1[00m$ [K]0;uday@uday: ~/practice/Javascript/JLP1[01;32muday@uday[00m:[01;34m~/practice/Javascript/JLP1[00m$ node App16.js 
+Hello Sid
+]0;uday@uday: ~/practice/Javascript/JLP1[01;32muday@uday[00m:[01;34m~/practice/Javascript/JLP1[00m$ node App16.js [1P[1@7
+[33m3[39m
+]0;uday@uday: ~/practice/Javascript/JLP1[01;32muday@uday[00m:[01;34m~/practice/Javascript/JLP1[00m$ node App17.js 
+[33m3[39m
+/home/uday/practice/Javascript/JLP1/App17.js:11
+console.log(sub());
+            ^
+
+TypeError: sub is not a function
+    at Object.<anonymous> [90m(/home/uday/practice/Javascript/JLP1/[39mApp17.js:11:13[90m)[39m
+[90m    at Module._compile (node:internal/modules/cjs/loader:1521:14)[39m
+[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)[39m
+[90m    at Module.load (node:internal/modules/cjs/loader:1266:32)[39m
+[90m    at Module._load (node:internal/modules/cjs/loader:1091:12)[39m
+[90m    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)[39m
+[90m    at node:internal/main/run_main_module:28:49[39m
+
+Node.js v20.19.5
+]0;uday@uday: ~/practice/Javascript/JLP1[01;32muday@uday[00m:[01;34m~/practice/Javascript/JLP1[00m$ node App17.js 
+[33m3[39m
+[33m1[39m
+]0;uday@uday: ~/practice/Javascript/JLP1[01;32muday@uday[00m:[01;34m~/practice/Javascript/JLP1[00m$ node App17.js 
+[33m3[39m
+[33m1[39m
+[33m8[39m
+]0;uday@uday: ~/practice/Javascript/JLP1[01;32muday@uday[00m:[01;34m~/practice/Javascript/JLP1[00m$ node App17.js [1P[1@8
+Uday
+]0;uday@uday: ~/practice/Javascript/JLP1[01;32muday@uday[00m:[01;34m~/practice/Javascript/JLP1[00m$ node App18.js [1P[1@9
+[33m25[39m
+/home/uday/practice/Javascript/JLP1/App19.js:6
+console.log(age);
+            ^
+
+ReferenceError: age is not defined
+    at Object.<anonymous> [90m(/home/uday/practice/Javascript/JLP1/[39mApp19.js:6:13[90m)[39m
+[90m    at Module._compile (node:internal/modules/cjs/loader:1521:14)[39m
+[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)[39m
+[90m    at Module.load (node:internal/modules/cjs/loader:1266:32)[39m
+[90m    at Module._load (node:internal/modules/cjs/loader:1091:12)[39m
+[90m    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)[39m
+[90m    at node:internal/main/run_main_module:28:49[39m
+
+Node.js v20.19.5
+]0;uday@uday: ~/practice/Javascript/JLP1[01;32muday@uday[00m:[01;34m~/practice/Javascript/JLP1[00m$ node App19.js 
+Called age in fun
+[33m25[39m
+direct Called age in fun
+/home/uday/practice/Javascript/JLP1/App19.js:9
+console.log(age);
+            ^
+
+ReferenceError: age is not defined
+    at Object.<anonymous> [90m(/home/uday/practice/Javascript/JLP1/[39mApp19.js:9:13[90m)[39m
+[90m    at Module._compile (node:internal/modules/cjs/loader:1521:14)[39m
+[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)[39m
+[90m    at Module.load (node:internal/modules/cjs/loader:1266:32)[39m
+[90m    at Module._load (node:internal/modules/cjs/loader:1091:12)[39m
+[90m    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)[39m
+[90m    at node:internal/main/run_main_module:28:49[39m
+
+Node.js v20.19.5
+]0;uday@uday: ~/practice/Javascript/JLP1[01;32muday@uday[00m:[01;34m~/practice/Javascript/JLP1[00m$ node App19.js [1P[1P[1@2[1@0
+/home/uday/practice/Javascript/JLP1/App20.js:6
+test();
+^
+
+ReferenceError: test is not defined
+    at Object.<anonymous> [90m(/home/uday/practice/Javascript/JLP1/[39mApp20.js:6:1[90m)[39m
+[90m    at Module._compile (node:internal/modules/cjs/loader:1521:14)[39m
+[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)[39m
+[90m    at Module.load (node:internal/modules/cjs/loader:1266:32)[39m
+[90m    at Module._load (node:internal/modules/cjs/loader:1091:12)[39m
+[90m    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)[39m
+[90m    at node:internal/main/run_main_module:28:49[39m
+
+Node.js v20.19.5
+]0;uday@uday: ~/practice/Javascript/JLP1[01;32muday@uday[00m:[01;34m~/practice/Javascript/JLP1[00m$ node App20.js 
+[33m20[39m
+[33m10[39m
+]0;uday@uday: ~/practice/Javascript/JLP1[01;32muday@uday[00m:[01;34m~/practice/Javascript/JLP1[00m$ [K]0;uday@uday: ~/practice/Javascript/JLP1[01;32muday@uday[00m:[01;34m~/practice/Javascript/JLP1[00m$ [K]0;uday@uday: ~/practice/Javascript/JLP1[01;32muday@uday[00m:[01;34m~/practice/Javascript/JLP1[00m$ [K]0;uday@uday: ~/practice/Javascript/JLP1[01;32muday@uday[00m:[01;34m~/practice/Javascript/JLP1[00m$ node App20.js 19[C[C[C[C[1P[1@5
+Sid Konde
+]0;uday@uday: ~/practice/Javascript/JLP1[01;32muday@uday[00m:[01;34m~/practice/Javascript/JLP1[00m$ node App15.js [1P[1@4
+Basuvraj lives in Pune
+]0;uday@uday: ~/practice/Javascript/JLP1[01;32muday@uday[00m:[01;34m~/practice/Javascript/JLP1[00m$ node App14.js [1P[1@3
+[
+  [32m'B'[39m, [32m'a'[39m, [32m's'[39m, [32m'u'[39m,
+  [32m'v'[39m, [32m'r'[39m, [32m'a'[39m, [32m'j'[39m,
+  [32m' '[39m, [32m'P'[39m, [32m'a'[39m, [32m't'[39m,
+  [32m'i'[39m, [32m'l'[39m, [32m'a'[39m
+]
+]0;uday@uday: ~/practice/Javascript/JLP1[01;32muday@uday[00m:[01;34m~/practice/Javascript/JLP1[00m$ node App13.js [1P[1@2
+[ [32m'Basuvraj Patila'[39m ]
+]0;uday@uday: ~/practice/Javascript/JLP1[01;32muday@uday[00m:[01;34m~/practice/Javascript/JLP1[00m$ node App12.js 
+[
+  [32m'B'[39m, [32m'a'[39m, [32m's'[39m, [32m'u'[39m,
+  [32m'v'[39m, [32m'r'[39m, [32m'a'[39m, [32m'j'[39m,
+  [32m' '[39m, [32m'P'[39m, [32m'a'[39m, [32m't'[39m,
+  [32m'i'[39m, [32m'l'[39m, [32m'a'[39m
+]
+]0;uday@uday: ~/practice/Javascript/JLP1[01;32muday@uday[00m:[01;34m~/practice/Javascript/JLP1[00m$ node App12.js [1P[1@1
+/home/uday/practice/Javascript/JLP1/App11.js:2
+console.log(nums.max(...nums));
+                 ^
+
+TypeError: nums.max is not a function
+    at Object.<anonymous> [90m(/home/uday/practice/Javascript/JLP1/[39mApp11.js:2:18[90m)[39m
+[90m    at Module._compile (node:internal/modules/cjs/loader:1521:14)[39m
+[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)[39m
+[90m    at Module.load (node:internal/modules/cjs/loader:1266:32)[39m
+[90m    at Module._load (node:internal/modules/cjs/loader:1091:12)[39m
+[90m    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)[39m
+[90m    at node:internal/main/run_main_module:28:49[39m
+
+Node.js v20.19.5
+]0;uday@uday: ~/practice/Javascript/JLP1[01;32muday@uday[00m:[01;34m~/practice/Javascript/JLP1[00m$ node App11.js 
+[33m10[39m
+[33m2[39m
+]0;uday@uday: ~/practice/Javascript/JLP1[01;32muday@uday[00m:[01;34m~/practice/Javascript/JLP1[00m$ Anode App11.js [1P[1@0
+[33m13[39m
+]0;uday@uday: ~/practice/Javascript/JLP1[01;32muday@uday[00m:[01;34m~/practice/Javascript/JLP1[00m$ node App10.js [1P[1P[1@9
+Value : 200
+]0;uday@uday: ~/practice/Javascript/JLP1[01;32muday@uday[00m:[01;34m~/practice/Javascript/JLP1[00m$ node App9.js [1P[1@8
+[33m10[39m
+]0;uday@uday: ~/practice/Javascript/JLP1[01;32muday@uday[00m:[01;34m~/practice/Javascript/JLP1[00m$ node App8.js [1P[1@7
+First  [33m1[39m
+Rest  [ [33m2[39m, [33m3[39m, [33m4[39m, [33m5[39m ]
+]0;uday@uday: ~/practice/Javascript/JLP1[01;32muday@uday[00m:[01;34m~/practice/Javascript/JLP1[00m$ node App7.js [1P[1@6
+[33m1[39m
+[33m2[39m
+[ [33m3[39m, [33m4[39m, [33m5[39m ]
+]0;uday@uday: ~/practice/Javascript/JLP1[01;32muday@uday[00m:[01;34m~/practice/Javascript/JLP1[00m$ [K]0;uday@uday: ~/practice/Javascript/JLP1[01;32muday@uday[00m:[01;34m~/practice/Javascript
