@@ -131,4 +131,7 @@ Rest  [ [33m2[39m, [33m3[39m, [33m4[39m, [33m5[39m ]
 [33m1[39m
 [33m2[39m
 [ [33m3[39m, [33m4[39m, [33m5[39m ]
-]0;uday@uday: ~/practice/Javascript/JLP1[01;32muday@uday[00m:[01;34m~/practice/Javascript/JLP1[00m$ [K]0;uday@uday: ~/practice/Javascript/JLP1[01;32muday@uday[00m:[01;34m~/practice/Javascript
+]0;uday@uday: ~/practice/Javascript/JLP1[01;32muday@uday[00m:[01;34m~/practice/Javascript/JLP1[00m$ [K]0;uday@uday: ~/practice/Javascript/JLP1[01;32muday@uday[00m:[01;34m~/practice/Javascript/JLP1[00m$ [K]0;uday@uday: ~/practice/Javascript/JLP1[01;32muday@uday[00m:[01;34m~/practice/Javascript/JLP1[00m$ [K]0;uday@uday: ~/practice/Javascript/JLP1[01;32muday@uday[00m:[01;34m~/practice/Javascript/JLP1[00m$ [K]0;uday@uday: ~/practice/Javascript/JLP1[01;32muday@uday[00m:[01;34m~/practice/Javascript/JLP1[00m$ exit
+exit
+
+Script done on 2026-02-20 12:24:50+05:30 [COMMAND_EXIT_CODE="0"]
