@@ -1,0 +1,10 @@
+ 1800  cd JS
+ 1807  cd JS/
+ 1809  cd JS
+ 1859  cd JS/JPS1/
+ 1977  cd JS/
+ 1979  history | grep "JS"
+ 1980  history | grep "JS" Day1.txt
+ 1981  history | grep "JS"> Day1.txt
+ 2014  history history | grep "JS"> Day3.txt
+ 2015  history | grep "JS" > Day3.txt
