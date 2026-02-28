@@ -29,4 +29,97 @@ uday:javascript$ node app10.py cd javascript/node ap
 [33mtrue[39m
 uday:javascript$ clear
 [H[2J[3Juday:javascript$ clearnode app10.js[1P.js[1P.js9.js
-[ [33
+[ [33m3[39m, [33m5[39m, [33m1[39m, [33m9[39m, [33m2[39m ] [33m9[39m
+uday:javascript$ node app9.js
+[ [33m3[39m, [33m5[39m, [33m1[39m, [33m9[39m, [33m2[39m ]  :-  [33m9[39m
+uday:javascript$ node app9.js[1P.js8.js
+[33m2[39m
+uday:javascript$ node app8.js[1P.js7.js
+hnisyadU
+uday:javascript$ node app7.js[1P.js6.js
+hnisyadU
+uday:javascript$ node app6.js[1P.js5.js
+54321
+uday:javascript$ node app5.js
+54321
+uday:javascript$ node app5.js[1P.js1.js4.js
+uday:javascript$ node app14.js[1P4.js
+/home/uday/practice/Company/IBM/javascript/app4.js:2
+  if (n <= 1) return false;
+  ^
+
+ReferenceError: n is not defined
+    at isPrime [90m(/home/uday/practice/Company/IBM/javascript/[39mapp4.js:2:3[90m)[39m
+    at Object.<anonymous> [90m(/home/uday/practice/Company/IBM/javascript/[39mapp4.js:9:13[90m)[39m
+[90m    at Module._compile (node:internal/modules/cjs/loader:1521:14)[39m
+[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)[39m
+[90m    at Module.load (node:internal/modules/cjs/loader:1266:32)[39m
+[90m    at Module._load (node:internal/modules/cjs/loader:1091:12)[39m
+[90m    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)[39m
+[90m    at node:internal/main/run_main_module:28:49[39m
+
+Node.js v20.19.5
+uday:javascript$ node app4.js
+[33mtrue[39m
+uday:javascript$ node app4.js[1P.js3.js
+[33m78.5[39m
+uday:javascript$ node app3.js[1P.js2.js
+[33m3[39m
+uday:javascript$ node app2.js[1P.js1.js
+[ [33m1[39m, [33m2[39m, [33m3[39m, [33m4[39m, [33m5[39m, [33m4[39m, [33m3[39m, [33m2[39m, [33m1[39m, [90mundefined[39m ]
+uday:javascript$ node app1.js
+[]
+uday:javascript$ node app1.js
+[]
+uday:javascript$ node app1.js
+[
+  [33m1[39m, [33m2[39m, [33m3[39m, [33m4[39m, [33m5[39m,
+  [33m4[39m, [33m3[39m, [33m2[39m, [33m1[39m
+]
+uday:javascript$ node app1.js
+[ [33m1[39m, [33m2[39m, [33m3[39m, [33m4[39m, [33m5[39m ]
+uday:javascript$ [Kuday:javascript$ [Kuday:javascript$ node app1.js8.js
+[33m-Infinity[39m
+uday:javascript$ node app18.js
+[33m-Infinity[39m
+uday:javascript$ node app18.js
+[33m102[39m
+uday:javascript$ node app18.js[1P.js9.js
+[33m0[39m
+uday:javascript$ node app19.js
+[33m5[39m
+uday:javascript$ node app19.js[1P.js[1P.js2.js0.js
+[33m120[39m
+uday:javascript$ [Kuday:javascript$ [Kuday:javascript$ node app20.js[1P.js[1P.js1.js3.js
+[33m-1[39m
+uday:javascript$ node app13.js[1P.js1.js[1P.js2.js
+[33m16[39m
+uday:javascript$ node app12.js[1P.js1.js
+[33mtrue[39m
+uday:javascript$ [Kuday:javascript$ [Kuday:javascript$ node app11.js[1P.js6.js
+[33m7[39m
+uday:javascript$ node app16.js[1P.js4.js
+[33m78.53981633974483[39m
+uday:javascript$ node app14.js[1P.js5.js
+[33mtrue[39m
+uday:javascript$ node app15.js[1P.js7.js
+[33m8[39m
+uday:javascript$ node app17.js
+[33m8[39m
+uday:javascript$ [Kuday:javascript$ [Kuday:javascript$ [Kuday:javascript$ [Kuday:javascript$ cd ../..
+uday:Company$ ../..
+bash: ../..: Is a directory
+uday:Company$ ../../c../../d../../ ../../
+uday:~$ ls
+[0m[01;34mbackend[0m            [01;34mNextjs[0m
+[01;34mDesktop[0m            [01;34mpgadmin4[0m
+[01;34mdocker[0m             [01;34mPictures[0m
+[01;34mDocuments[0m          [01;34mpractice[0m
+[01;34mDownloads[0m          [01;34mprojects[0m
+[01;34memail-checker[0m      [01;34mPublic[0m
+[01;34minterview[0m          school_db_dump.sql
+[01;34mlinux_mastery[0m      [01;34msnap[0m
+[01;34mlocal[0m              [01;34mTemplates[0m
+[01;34mMusic[0m              [01;34mVideos[0m
+[01;34mmy-static-website[0m
+uday:~$ cd[K[K[Kuday:~$ [Kuday:~$ [Kuday:~$ [Kuday:~$ [Kuday:~$ [Kuday:~$ [Kuday:~$ [Kuday:~$ [Kuday:~$ [Kuday:~$ [
