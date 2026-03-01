@@ -1,13 +1,21 @@
 Script started on 2026-02-28 11:07:26+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="53" LINES="14"]
-]0;uday@uday: ~/practice/Company/IBM[01;32muday@uday[00m:[01;34m~/practice/Company/IBM[00m$ mkdir python javasc ript
+]0;uday@uday: ~/practice/Company/IBM[01;32muday@uday[00m:[01;34m~/practice/Company/IBM[00m$ mkdir python javasc 
+ript
 ]0;uday@uday: ~/practice/Company/IBM[01;32muday@uday[00m:[01;34m~/practice/Company/IBM[00m$ cd javascript/
-]0;uday@uday: ~/practice/Company/IBM/javascript[01;32muday@uday[00m:[01;34m~/practice/Company/IBM/javascript[00m$ touch Ap p[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
-[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kap p{1..20}.js
+]0;uday@uday: ~/practice/Company/IBM/javascript[01;32muday@uday[00m:[01;34m~/practice/Company/IBM/javascript[00m$ touch Ap 
+p
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kap 
+p{1..20}.js
 ]0;uday@uday: ~/practice/Company/IBM/javascript[01;32muday@uday[00m:[01;34m~/practice/Company/IBM/javascript[00m$ cd ..
 ]0;uday@uday: ~/practice/Company/IBM[01;32muday@uday[00m:[01;34m~/practice/Company/IBM[00m$ cd python/
 ]0;uday@uday: ~/practice/Company/IBM/python[01;32muday@uday[00m:[01;34m~/practice/Company/IBM/python[00m$ cd python/..[Ktouch app{1..20}.js[C[K[Kpy
-]0;uday@uday: ~/practice/Company/IBM/python[01;32muday@uday[00m:[01;34m~/practice/Company/IBM/python[00m$ [K]0;uday@uday: ~/practice/Company/IBM/python[01;32muday@uday[00m:[01;34m~/practice/Company/IBM/python[00m$ touch app{1..20}.py[9Pcd python/..[Ktouch app{1..20}.js[5Pcd javascript/mkdir python javascript[15Pgit push[4Pexithistory | grep "JS" > Day3.txt[7@history | grep "JS"[C[C[C[C[C[C[C[C[C[C[23Pnode App11.js 2[C[C[C[C3[C[C[C[C4[C[C[C[C5[C[C[C[C6[C[C[C[C5[C[C[C[C4[C[C[C[C3[C[C[C[C2[C[C[C[C1[C[C[C[Chistory history | grep "JS"> Day3.txt[7P| grep "JS" [C[C[C[C[C[C[C[C[C[C[7@history | grep "JS"[C[C[C[C[C[C[C[C[C[C[23Pnode App11.js 2[C[C[C[C3[C[C[C[C4[C[C[C[C5[C[C[C[C6[C[C[C[C20[C[C[C[C19[C[C[C[C8[C[C[C[C7[C[C[C[C[1P[C[C[C[C2[C[C[C[C3[C[C[C[C4[C[C[C[C5[C[C[C[C6[C[C[C[C7[C[C[C[C8[C[C[C[C9[C[C[C[C[1@10[C[C[C[C3[C[C[C[C[C27[C[C[C[C9[C[C[C[C8[C[C[C[C6[C[C[C[C4[C[C[C[C5[C[C[C[C3[C[C[C[C2[C[C[C[C1[C[C[C[Ctouch App{1..30}.js[12Pcd JPS2history | grep "JS"> Day1.txt[1P Day1.txt[K[K[2Pcd JS/history | grep "JS" Day1.txt> Day1.txt[1P Day1.txt[K[K[2Pcd JS/PS1='\u:\W$ '
-uday:python$ [Kuday:python$ [Kuday:python$ node app`[K10.py 
+]0;uday@uday: ~/practice/Company/IBM/python[01;32muday@uday[00m:[01;34m~/practice/Company/IBM/python[00m$ 
+[K]0;uday@uday: ~/practice/Company/IBM/python[01;32muday@uday[00m:[01;34m~/practice/Company/IBM/python[00m$ touch app{1..20}.py[9Pcd python/..[Ktouch app{1..20}.js[5Pcd javascript/mkdir python javascript[15Pgit push[4Pexithistory | grep "JS" > Day3.txt[7@history | grep "JS"[C[C[C[C[C[C[C[C[C[C[23Pnode App11.js 2[C[C[C[C3[C[C[C[C4[C[C[C[C5[C[C[C[C6[C[C[C[C5[C[C[C[C4[C[C[C[C3[C[C[C[C2[C[C[C[C1[C[C[C[Chistory history | grep "JS"> Day3.txt[7P| grep "JS" [C[C[C[C[C[C[C[C[C[C[7@history | grep "JS"[C[C[C[C[C[C[C[C[C[C[23Pnode App11.js 2[C[C[C[C3[C[C[C[C4[C[C[C[C5[C[C[C[C6[C[C[C[C20[C[C[C[C19[C[C[C[C8[C[C[C[C7[C[C[C[C[1P[C[C[C[C2[C[C[C[C3[C[C[C[C4[C[C[C[C5[C[C[C[C6[C[C[C[C7[C[C[C[C8[C[C[C[C9[C[C[C[C[1@10[C[C[C[C3[C[C[C[C[C27[C[C[C[C9[C[C[C[C8[C[C[C[C6[C[C[C[C4[C[C[C[C5[C[C[C[C3[C[C[C[C2[C[C[C[C1[C[C[C[Ctouch App{1..30}.js[12Pcd JPS2history | grep "JS"> Day1.txt[1P Day1.txt[K[K[2Pcd JS/history | grep "JS" Day1.txt> Day1.txt[1P Day1.txt[K[K[2Pcd JS/PS1='\u:\W$ '
+uday:python$ 
+[Kuday:python$ 
+[Kuday:python$ node app`[K10.py 
 uday:python$ cd ..
 uday:IBM$ cd javascript/
 uday:javascript$ cd javascript/..[Knode app10.py 
@@ -78,7 +86,9 @@ uday:javascript$ node app1.js
 ]
 uday:javascript$ node app1.js
 [ [33m1[39m, [33m2[39m, [33m3[39m, [33m4[39m, [33m5[39m ]
-uday:javascript$ [Kuday:javascript$ [Kuday:javascript$ node app1.js8.js
+uday:javascript$ 
+[Kuday:javascript$ 
+[Kuday:javascript$ node app1.js8.js
 [33m-Infinity[39m
 uday:javascript$ node app18.js
 [33m-Infinity[39m
@@ -90,13 +100,17 @@ uday:javascript$ node app19.js
 [33m5[39m
 uday:javascript$ node app19.js[1P.js[1P.js2.js0.js
 [33m120[39m
-uday:javascript$ [Kuday:javascript$ [Kuday:javascript$ node app20.js[1P.js[1P.js1.js3.js
+uday:javascript$ 
+[Kuday:javascript$ 
+[Kuday:javascript$ node app20.js[1P.js[1P.js1.js3.js
 [33m-1[39m
 uday:javascript$ node app13.js[1P.js1.js[1P.js2.js
 [33m16[39m
 uday:javascript$ node app12.js[1P.js1.js
 [33mtrue[39m
-uday:javascript$ [Kuday:javascript$ [Kuday:javascript$ node app11.js[1P.js6.js
+uday:javascript$ 
+[Kuday:javascript$ 
+[Kuday:javascript$ node app11.js[1P.js6.js
 [33m7[39m
 uday:javascript$ node app16.js[1P.js4.js
 [33m78.53981633974483[39m
@@ -106,20 +120,14 @@ uday:javascript$ node app15.js[1P.js7.js
 [33m8[39m
 uday:javascript$ node app17.js
 [33m8[39m
-uday:javascript$ [Kuday:javascript$ [Kuday:javascript$ [Kuday:javascript$ [Kuday:javascript$ cd ../..
+uday:javascript$ 
+[Kuday:javascript$ 
+[Kuday:javascript$ 
+[Kuday:javascript$ 
+[Kuday:javascript$ cd ../..
 uday:Company$ ../..
 bash: ../..: Is a directory
 uday:Company$ ../../c../../d../../ ../../
 uday:~$ ls
-[0m[01;34mbackend[0m            [01;34mNextjs[0m
-[01;34mDesktop[0m            [01;34mpgadmin4[0m
-[01;34mdocker[0m             [01;34mPictures[0m
-[01;34mDocuments[0m          [01;34mpractice[0m
-[01;34mDownloads[0m          [01;34mprojects[0m
-[01;34memail-checker[0m      [01;34mPublic[0m
-[01;34minterview[0m          school_db_dump.sql
-[01;34mlinux_mastery[0m      [01;34msnap[0m
-[01;34mlocal[0m              [01;34mTemplates[0m
-[01;34mMusic[0m              [01;34mVideos[0m
-[01;34mmy-static-website[0m
-uday:~$ cd[K[K[Kuday:~$ [Kuday:~$ [Kuday:~$ [Kuday:~$ [Kuday:~$ [Kuday:~$ [Kuday:~$ [Kuday:~$ [Kuday:~$ [Kuday:~$ [
+
+[
