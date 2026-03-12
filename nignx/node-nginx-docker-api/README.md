@@ -46,7 +46,7 @@ node-nginx-docker-api/
 
 ```
 
-git clone <your-repo-url>
+git clone <https://github.com/Udaykalse/Practice-repo/tree/main/nignx/node-nginx-docker-api>
 cd node-nginx-docker-api
 
 ```
