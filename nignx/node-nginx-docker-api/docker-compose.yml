@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  node-api:
+    build: ./app
+    container_name: node-api
+    ports:
+      - "3000:3000"
+
+  nginx:
+    build: ./nginx
+    container_name: nginx
+    ports:
+      - "80:80"
+    depends_on:
+      - node-api
