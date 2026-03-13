@@ -11,7 +11,7 @@ Python  - Tutorial Practice Day 1: Questions and Answers
 Python Project :- 0. (Number guessing)
 Javascript Project :- 3. (Calculator)
 Animation And CSS Practice – Day 
-
+GojoSama@2000JJK heroku
 Python Program to Make a Simple Calculator
 
 leetcode udaykalse123
