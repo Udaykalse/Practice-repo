@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Code Net : AI Assistant</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="head">
+        <div
+          class="logo"
+          id="instaLogo"
+          role="button"
+          tabindex="0"
+          aria-label="Instagram profile"
+        >
+          <img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%231e293b' stroke='%2338bdf8' stroke-width='2'/%3E%3Ctext x='50' y='67' font-size='42' text-anchor='middle' fill='%2338bdf8' font-weight='bold'%3EC%3C/text%3E%3C/svg%3E"
+            alt="Code Net Logo"
+          />
+        </div>
+        <div class="info">
+          <span>Code Net</span>
+          <span>bot . online</span>
+        </div>
+      </div>
+      <div class="tab" id="tab">
+        <!-- dynamic messages appear here -->
+        <div class="welcome-card">
+          🤖 Hello! I'm Code Net AI. Ask me anything — coding, tech,
+          explanations, or just chat. Type your message below ✨
+        </div>
+      </div>
+      <div class="input-area">
+        <input
+          type="text"
+          id="msg_text"
+          placeholder="Ask me anything... e.g., 'What is React?' or 'Write a Python loop'"
+        />
+        <button id="sendBtn" aria-label="Send message">
+          <img src="https://i.ibb.co/F678sDK/paper-plane.png" alt="send" />
+        </button>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
