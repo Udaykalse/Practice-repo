@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+font-family: 'Kanit', sans-serif;
+}
+.scene {
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+background: #0d0d1a;
+position: relative;
+}
+.glow-shadow {
+position: absolute;
+top: calc(50% + 148px);
+left: 50%;
+transform: translate(-50%, -50%);
+width: 240px;
+height: 36px;
+background: rgba(0, 0, 0, 0.55);
+border-radius: 50%;
+animation: shadowPulse 5s ease-in-out infinite;
+}
+.flask {
+position: relative;
+width: 280px;
+height: 280px;
+background: rgba(255, 255, 255, 0.08);
+border-radius: 50%;
+border: 8px solid rgba(255, 255, 255, 0.12);
+animation: tilt 5s ease-in-out infinite;
+transform-origin: bottom center;
+}
+.flask::before {
+content: "";
+position: absolute;
+top: -14px;
+left: 50%;
+transform: translateX(-50%);
+width: 38%;
+height: 28px;
+border: 14px solid #3a3a4a;
+border-radius: 50%;
+box-shadow: 0 8px #222233;
+}
+.flask::after {
+content: "";
+position: absolute;
+top: 33%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 140px;
+height: 55px;
+background: rgba(255, 255, 255, 0.04);
+border-radius: 50%;
+animation: innerGlint 5s linear infinite;
+}
+.fluid {
+position: absolute;
+top: 48%;
+left: 5px;
+right: 5px;
+bottom: 5px;
+background: #00c8ff;
+border-bottom-left-radius: 145px;
+border-bottom-right-radius: 145px;
+filter: drop-shadow(0 0 70px #00c8ff);
+transform-origin: top center;
+animation: sloshing 5s ease-in-out infinite;
+}
+.fluid::before {
+content: "";
+position: absolute;
+top: -10px;
+width: 100%;
+height: 20px;
+background: #00e5ff;
+border-radius: 50%;
+filter: drop-shadow(0 0 60px #00e5ff);
+}
+.glint {
+position: absolute;
+top: 18%;
+left: 18%;
+width: 60px;
+height: 30px;
+background: rgba(255, 255, 255, 0.12);
+border-radius: 50%;
+transform: rotate(-30deg);
+pointer-events: none;
+}
+@keyframes tilt {
+0% { transform: rotate(0deg); filter: hue-rotate(0deg); }
+25% { transform: rotate(20deg); }
+50% { transform: rotate(0deg); filter: hue-rotate(180deg); }
+75% { transform: rotate(-20deg); }
+100% { transform: rotate(0deg); filter: hue-rotate(360deg); }
+}
+@keyframes sloshing {
+0% { transform: rotate(0deg); }
+25% { transform: rotate(-20deg); }
+30% { transform: rotate(-22deg); }
+50% { transform: rotate(0deg); }
+75% { transform: rotate(20deg); }
+80% { transform: rotate(22deg); }
+100% { transform: rotate(0deg); }
+}
+@keyframes innerGlint {
+0% { left: 50%; width: 140px; height: 55px; }
+25% { left: 55%; width: 130px; height: 60px; }
+50% { left: 50%; width: 140px; height: 55px; }
+75% { left: 45%; width: 130px; height: 60px; }
+100% { left: 50%; width: 140px; height: 55px; }
+}
+@keyframes shadowPulse {
+0% { left: 50%; width: 240px; height: 36px; top: calc(50% + 148px); }
+25% { left: 54%; width: 248px; height: 28px; top: calc(50% + 130px); }
+50% { left: 50%; width: 240px; height: 36px; top: calc(50% + 148px); }
+75% { left: 46%; width: 248px; height: 28px; top: calc(50% + 130px); }
+100% { left: 50%; width: 240px; height: 36px; top: calc(50% + 148px); }
+}
