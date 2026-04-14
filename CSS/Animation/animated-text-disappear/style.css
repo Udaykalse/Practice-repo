@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  font-size: 12vw;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+.vanish-wrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  height: fit-content;
+  bottom: 0;
+  top: 0;
+}
+.vanish-wrap span {
+  display: inline-block;
+  color: transparent;
+  text-shadow: 0px 0px 0px rgb(255, 255, 255);
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+.vanish-wrap span:nth-child(1) {
+  animation-name: flyLeft;
+  animation-delay: 0s;
+}
+.vanish-wrap span:nth-child(2) {
+  animation-name: flyRight;
+  animation-delay: 0.3s;
+}
+.vanish-wrap span:nth-child(3) {
+  animation-name: flyLeft;
+  animation-delay: 0.6s;
+}
+.vanish-wrap span:nth-child(4) {
+  animation-name: flyRight;
+  animation-delay: 0.9s;
+}
+.vanish-wrap span:nth-child(5) {
+  animation-name: flyLeft;
+  animation-delay: 1.2s;
+}
+.vanish-wrap span:nth-child(6) {
+  animation-name: flyRight;
+  animation-delay: 1.6s;
+}
+.vanish-wrap span:nth-child(7) {
+  animation-name: flyLeft;
+  animation-delay: 2s;
+}
+@keyframes flyLeft {
+  50% {
+    transform: skew(50deg) translateY(-200%);
+    text-shadow: 0px 0px 50px;
+    opacity: 0;
+  }
+}
+@keyframes flyRight {
+  50% {
+    transform: skew(-50deg) translateY(-200%);
+    text-shadow: 0px 0px 50px;
+    opacity: 0;
+  }
+}
