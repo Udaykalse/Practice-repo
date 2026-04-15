@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+:root {
+  --border-col: #482896;
+  --shadow-col: #734bd4;
+  --bg-primary: #8357eb;
+  --bg-secondary: #986ef1;
+  --glow-soft: #c791e5;
+  --glow-vivid: #f679d2;
+  --cord-col: #9938b8;
+  --icon-col: #ebe4f1;
+  --fixture-w: 140px;
+  --fixture-h: 100px;
+  --cap-h: 20px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--bg-primary);
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+form {
+  width: 200px;
+  padding: 2em 2.2em;
+  border-radius: 4px;
+  background: var(--bg-secondary);
+  box-shadow: 0 5px 15px var(--shadow-col);
+}
+.fixture-wrap {
+  position: relative;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+.fixture {
+  height: var(--fixture-h);
+  width: var(--fixture-w);
+  position: relative;
+  z-index: 2;
+}
+.shade-body {
+  background-color: var(--glow-vivid);
+  transform: skewX(-5deg);
+  height: var(--fixture-h);
+  width: 60%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.shade-body.right {
+  transform: skewX(5deg);
+  left: auto;
+  right: 0;
+}
+.shade-cap {
+  background: transparent;
+  position: absolute;
+  width: calc(var(--fixture-w) - 10px);
+  height: var(--cap-h);
+  left: 6px;
+  top: -17px;
+}
+.cap-side {
+  width: 50%;
+  height: var(--cap-h);
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: skewX(-5deg);
+  border-radius: 80% 0 0 0;
+  border-top: 2px solid var(--border-col);
+  border-bottom: none;
+}
+.cap-side.right {
+  transform: skewX(5deg);
+  left: auto;
+  right: 1px;
+  border-radius: 0 80% 0 0;
+}
+.shade-base {
+  background: linear-gradient(#fffffa, #fdffb2);
+  height: calc(var(--cap-h) + 10px);
+  width: calc(var(--fixture-w) + 10px);
+  position: absolute;
+  top: auto;
+  bottom: -18px;
+  left: -5px;
+  border-radius: 50%;
+  border-top: 3px solid var(--border-col);
+  border-bottom: 2px solid var(--glow-soft);
+}
+.shade-base::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(var(--border-col), var(--glow-soft));
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+.bulb {
+  position: absolute;
+  width: calc(var(--fixture-w) - 20px);
+  height: calc(var(--fixture-h) - 20px);
+  top: calc(var(--cap-h) - 10px);
+  left: calc(var(--cap-h) - 10px);
+  border-radius: 5% 3% 38% 40%;
+  background-color: #fffffa;
+  filter: blur(15px);
+  z-index: 2;
+  opacity: 0;
+  transition: all 300ms;
+}
+.cord {
+  position: absolute;
+  width: 8px;
+  height: 1200px;
+  background: linear-gradient(var(--border-col) 90%, var(--cord-col));
+  bottom: 100%;
+  margin: auto;
+}
+.beam {
+  background: linear-gradient(var(--glow-soft), var(--bg-primary) 30%);
+  width: 80%;
+  height: 200vh;
+  position: absolute;
+  top: 150%;
+  left: auto;
+  border-radius: 50% 50% 0 0;
+  filter: blur(5px);
+  z-index: -1;
+  opacity: 0;
+  transition: all 300ms;
+}
+.brightness-icon {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+}
+.star-icon {
+  background: var(--icon-col);
+  border-radius: 50%;
+  position: relative;
+  float: left;
+  transform: scale(0.8);
+}
+.spike {
+  background: var(--icon-col);
+  width: 2px;
+  height: 4px;
+  position: absolute;
+  left: 3px;
+  bottom: 12px;
+  transform-origin: 50% calc(100% + 8px);
+  border-radius: 50%;
+}
+.spike:nth-child(1) {
+  transform: rotate(45deg);
+}
+.spike:nth-child(2) {
+  transform: rotate(90deg);
+}
+.spike:nth-child(3) {
+  transform: rotate(135deg);
+}
+.spike:nth-child(4) {
+  transform: rotate(180deg);
+}
+.spike:nth-child(5) {
+  transform: rotate(225deg);
+}
+.spike:nth-child(6) {
+  transform: rotate(270deg);
+}
+.spike:nth-child(7) {
+  transform: rotate(315deg);
+}
+.spike:nth-child(8) {
+  transform: rotate(360deg);
+}
+input[type="range"] {
+  -webkit-appearance: none;
+  width: calc(100% - 30px);
+  float: right;
+}
+input[type="range"]:focus {
+  outline: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: var(--icon-col);
+}
+input[type="range"]::-webkit-slider-thumb {
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+  background: var(--icon-col);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -6px;
+}
+input[type="range"]:hover::-webkit-slider-thumb {
+  box-shadow: 0 0 5px var(--icon-col);
+}
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: var(--icon-col);
+}
+input[type="range"]::-moz-range-thumb {
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+  background: var(--icon-col);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -6px;
+}
+input[type="range"]::-ms-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: var(--icon-col);
+}
+input[type="range"]::-ms-thumb {
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+  background: var(--icon-col);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -6px;
+}
+body[data-glow^="1"] {
+  .bulb,
+  .beam {
+    opacity: 0.1;
+  }
+  .shade-base::before {
+    opacity: 0.9;
+  }
+}
+body[data-glow^="2"] {
+  .bulb,
+  .beam {
+    opacity: 0.2;
+  }
+  .shade-base::before {
+    opacity: 0.8;
+  }
+}
+body[data-glow^="3"] {
+  .bulb,
+  .beam {
+    opacity: 0.3;
+  }
+  .shade-base::before {
+    opacity: 0.7;
+  }
+}
+body[data-glow^="4"] {
+  .bulb,
+  .beam {
+    opacity: 0.4;
+  }
+  .shade-base::before {
+    opacity: 0.6;
+  }
+}
+body[data-glow^="5"] {
+  .bulb,
+  .beam {
+    opacity: 0.5;
+  }
+  .shade-base::before {
+    opacity: 0.5;
+  }
+}
+body[data-glow^="6"] {
+  .bulb,
+  .beam {
+    opacity: 0.6;
+  }
+  .shade-base::before {
+    opacity: 0.4;
+  }
+}
+body[data-glow^="7"] {
+  .bulb,
+  .beam {
+    opacity: 0.7;
+  }
+  .shade-base::before {
+    opacity: 0.3;
+  }
+}
+body[data-glow^="8"] {
+  .bulb,
+  .beam {
+    opacity: 0.8;
+  }
+  .shade-base::before {
+    opacity: 0.2;
+  }
+}
+body[data-glow^="9"] {
+  .bulb,
+  .beam {
+    opacity: 0.9;
+  }
+  .shade-base::before {
+    opacity: 0.1;
+  }
+}
+body[data-glow="10"] {
+  .bulb,
+  .beam {
+    opacity: 1;
+  }
+  .shade-base::before {
+    opacity: 0;
+  }
+}

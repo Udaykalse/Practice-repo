@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glow Lamp Brightness Control</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <section class="fixture-wrap">
+      <div class="cord"></div>
+      <div class="fixture">
+        <div class="shade-cap">
+          <div class="cap-side"></div>
+          <div class="cap-side right"></div>
+        </div>
+        <div class="shade-body"></div>
+        <div class="shade-body right"></div>
+        <div class="shade-base"></div>
+        <div class="bulb"></div>
+      </div>
+      <div class="beam"></div>
+    </section>
+    <form oninput="document.body.setAttribute('data-glow', brightSlider.value)">
+      <div class="brightness-icon star-icon">
+        <div class="spike"></div>
+        <div class="spike"></div>
+        <div class="spike"></div>
+        <div class="spike"></div>
+        <div class="spike"></div>
+        <div class="spike"></div>
+        <div class="spike"></div>
+        <div class="spike"></div>
+      </div>
+      <input type="range" id="brightSlider" value="0" min="0" max="10" />
+    </form>
+  </body>
+</html>
