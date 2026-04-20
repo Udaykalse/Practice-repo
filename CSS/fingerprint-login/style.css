@@ -1,0 +1,420 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Share+Tech+Mono&display=swap");
+
+:root {
+  --bg: #050c1a;
+  --panel: #0a1628;
+  --border: #1a3050;
+  --accent: #00d4ff;
+  --accent-glow: rgba(0, 212, 255, 0.35);
+  --accent-dim: rgba(0, 212, 255, 0.15);
+  --success: #00ffb0;
+  --success-glow: rgba(0, 255, 176, 0.4);
+  --text: #7fb8d4;
+  --text-bright: #cdeeff;
+  --fp-base: #1e4060;
+  --fp-active: var(--accent);
+  --scan-line: rgba(0, 212, 255, 0.6);
+  --radius: 18px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  font-family: "Rajdhani", sans-serif;
+  overflow: hidden;
+}
+
+/* Animated grid background */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 212, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 255, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: gridDrift 20s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes gridDrift {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(40px);
+  }
+}
+
+/* Radial glow */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 60% 60% at 50% 50%,
+    rgba(0, 80, 140, 0.25) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+/* ── Card ── */
+.card {
+  position: relative;
+  width: 320px;
+  padding: 48px 36px 40px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  box-shadow:
+    0 0 0 1px rgba(0, 212, 255, 0.08),
+    0 30px 80px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  z-index: 1;
+}
+
+/* Corner accents */
+.card::before,
+.card::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-color: var(--accent);
+  border-style: solid;
+  opacity: 0.7;
+}
+.card::before {
+  top: 12px;
+  left: 12px;
+  border-width: 2px 0 0 2px;
+  border-radius: 4px 0 0 0;
+}
+.card::after {
+  bottom: 12px;
+  right: 12px;
+  border-width: 0 2px 2px 0;
+  border-radius: 0 0 4px 0;
+}
+
+/* Corner accents right/left via pseudo siblings */
+.corner-tr,
+.corner-bl {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-color: var(--accent);
+  border-style: solid;
+  opacity: 0.7;
+}
+.corner-tr {
+  top: 12px;
+  right: 12px;
+  border-width: 2px 2px 0 0;
+  border-radius: 0 4px 0 0;
+}
+.corner-bl {
+  bottom: 12px;
+  left: 12px;
+  border-width: 0 0 2px 2px;
+  border-radius: 0 0 0 4px;
+}
+
+/* Header */
+.card-header {
+  text-align: center;
+  letter-spacing: 0.15em;
+}
+.card-header .brand {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 11px;
+  color: var(--accent);
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+.card-header h1 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-bright);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+/* ── Button ── */
+.container {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 35%, #0f2a44, #061220);
+  border: 2px solid var(--border);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s;
+  box-shadow:
+    0 0 0 8px rgba(0, 212, 255, 0.04),
+    0 0 30px rgba(0, 0, 0, 0.5);
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.container:hover {
+  border-color: rgba(0, 212, 255, 0.4);
+  box-shadow:
+    0 0 0 8px rgba(0, 212, 255, 0.08),
+    0 0 40px rgba(0, 212, 255, 0.15);
+}
+
+/* Pulse ring */
+.container::before {
+  content: "";
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 212, 255, 0.15);
+  animation: pulse-ring 2.5s ease-in-out infinite;
+}
+@keyframes pulse-ring {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.06);
+    opacity: 0.15;
+  }
+}
+
+/* ── SVG fingerprints ── */
+.fingerprint {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  transition: opacity 0.4s ease;
+}
+
+.fingerprint-base {
+  opacity: 1;
+}
+.fingerprint-base .odd {
+  stroke: #2a6080;
+}
+.fingerprint-base .even {
+  stroke: #1e4a65;
+}
+
+.fingerprint-active {
+  opacity: 0;
+}
+.fingerprint-active .odd {
+  stroke: var(--accent);
+}
+.fingerprint-active .even {
+  stroke: var(--accent);
+}
+
+/* Scan line animation on active svg */
+.fingerprint-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--scan-line);
+  top: 0;
+  animation: none;
+}
+
+/* OK checkmark */
+.ok {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  opacity: 0;
+  transform: scale(0.6);
+  transition:
+    opacity 0.35s,
+    transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ── ACTIVE STATE ── */
+.container.active {
+  border-color: var(--accent);
+  box-shadow:
+    0 0 0 8px var(--accent-dim),
+    0 0 50px var(--accent-glow),
+    inset 0 0 20px rgba(0, 212, 255, 0.06);
+  animation: ripple 0.4s ease;
+}
+
+@keyframes ripple {
+  0% {
+    box-shadow:
+      0 0 0 0 var(--accent-glow),
+      0 0 50px var(--accent-glow);
+  }
+  100% {
+    box-shadow:
+      0 0 0 8px var(--accent-dim),
+      0 0 50px var(--accent-glow);
+  }
+}
+
+/* Scan sweep */
+.container.active .fingerprint-active {
+  opacity: 1;
+}
+.container.active .fingerprint-base {
+  opacity: 0;
+}
+
+/* Animate each path sequentially */
+.container.active .fingerprint-active path {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: draw 0.8s ease forwards;
+}
+.container.active .fingerprint-active path:nth-child(1) {
+  animation-delay: 0s;
+}
+.container.active .fingerprint-active path:nth-child(2) {
+  animation-delay: 0.04s;
+}
+.container.active .fingerprint-active path:nth-child(3) {
+  animation-delay: 0.08s;
+}
+.container.active .fingerprint-active path:nth-child(4) {
+  animation-delay: 0.12s;
+}
+.container.active .fingerprint-active path:nth-child(5) {
+  animation-delay: 0.16s;
+}
+.container.active .fingerprint-active path:nth-child(6) {
+  animation-delay: 0.2s;
+}
+.container.active .fingerprint-active path:nth-child(7) {
+  animation-delay: 0.24s;
+}
+.container.active .fingerprint-active path:nth-child(8) {
+  animation-delay: 0.28s;
+}
+.container.active .fingerprint-active path:nth-child(9) {
+  animation-delay: 0.32s;
+}
+.container.active .fingerprint-active path:nth-child(10) {
+  animation-delay: 0.36s;
+}
+.container.active .fingerprint-active path:nth-child(11) {
+  animation-delay: 0.4s;
+}
+.container.active .fingerprint-active path:nth-child(12) {
+  animation-delay: 0.44s;
+}
+.container.active .fingerprint-active path:nth-child(13) {
+  animation-delay: 0.48s;
+}
+.container.active .fingerprint-active path:nth-child(14) {
+  animation-delay: 0.52s;
+}
+.container.active .fingerprint-active path:nth-child(15) {
+  animation-delay: 0.56s;
+}
+.container.active .fingerprint-active path:nth-child(16) {
+  animation-delay: 0.6s;
+}
+.container.active .fingerprint-active path:nth-child(17) {
+  animation-delay: 0.64s;
+}
+.container.active .fingerprint-active path:nth-child(18) {
+  animation-delay: 0.68s;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Success state */
+.container.success .fingerprint-base,
+.container.success .fingerprint-active {
+  opacity: 0;
+}
+.container.success .ok {
+  opacity: 1;
+  transform: scale(1);
+}
+.container.success {
+  border-color: var(--success);
+  box-shadow:
+    0 0 0 8px rgba(0, 255, 176, 0.1),
+    0 0 60px var(--success-glow),
+    inset 0 0 20px rgba(0, 255, 176, 0.05);
+}
+
+/* ── Label & status text ── */
+.status-text {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 13px;
+  color: var(--text);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  height: 16px;
+  transition: color 0.3s;
+  text-align: center;
+}
+.status-text.active {
+  color: var(--accent);
+}
+.status-text.success {
+  color: var(--success);
+}
+
+/* Dots loader */
+.dots {
+  display: inline-block;
+  animation: blink 1.2s steps(3, end) infinite;
+}
+@keyframes blink {
+  0% {
+    content: ".";
+  }
+  33% {
+    content: "..";
+  }
+  66% {
+    content: "...";
+  }
+  100% {
+    content: "";
+  }
+}
+
+.hint {
+  font-size: 11px;
+  color: rgba(127, 184, 212, 0.35);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+}
