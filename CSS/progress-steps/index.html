@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Progress Steps</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="title">Order Progress</h2>
+
+      <div class="progress-container">
+        <div class="progress" id="progress"></div>
+        <div class="step active">
+          <span class="icon">&#128722;</span>
+          <span class="label">Order</span>
+        </div>
+        <div class="step">
+          <span class="icon">&#128230;</span>
+          <span class="label">Packed</span>
+        </div>
+        <div class="step">
+          <span class="icon">&#128666;</span>
+          <span class="label">Shipped</span>
+        </div>
+        <div class="step">
+          <span class="icon">&#9989;</span>
+          <span class="label">Delivered</span>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button class="btn" id="prev" disabled>&#8592; Prev</button>
+        <button class="btn" id="next">Next &#8594;</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
