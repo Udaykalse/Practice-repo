@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Rotating Navigation</title>
+  </head>
+  <body>
+    <div class="container" id="home">
+      <div class="circle-container">
+        <div class="circle">
+          <button id="close"><i class="fas fa-times"></i></button>
+          <button id="open"><i class="fas fa-bars"></i></button>
+        </div>
+      </div>
+      <div class="content">
+        <h1>Amazing Article</h1>
+        <small>By John Doe &nbsp;·&nbsp; May 2025</small>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore repellendus nostrum harum quis cupiditate molestiae voluptates quam beatae odit autem incidunt voluptatibus. Provident suscipit iusto facere dolorum quis asperiores illo earum vel sit modi dicta nulla.</p>
+        <h2>Explore the City</h2>
+        <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=2100&q=80" alt="City skyline at night" />
+        <p>Dignissimos esse possimus numquam laborum nemo minus sequi doloribus porro quia fugiat aperiam optio dolores. Nemo quia adipisci reiciendis provident architecto molestias qui a ut placeat dolorum similique fuga facilis modi suscipit perferendis blanditiis.</p>
+      </div>
+    </div>
+    <section id="about">
+      <div class="section-inner">
+        <h2><i class="fas fa-user-alt"></i> About Me</h2>
+        <div class="about-grid">
+          <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=400&q=80" alt="Profile photo" class="avatar" />
+          <div>
+            <h3>John Doe</h3>
+            <p class="tagline">Frontend Developer · Designer · Coffee Enthusiast ☕</p>
+            <p>I'm a passionate developer who loves building clean, accessible, and visually engaging web experiences. I specialise in HTML, CSS, and JavaScript with a focus on smooth UI interactions.</p>
+            <div class="skills">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Figma</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="section-inner">
+        <h2><i class="fas fa-envelope"></i> Contact</h2>
+        <p class="contact-sub">Have a project in mind? Let's talk.</p>
+        <form class="contact-form">
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text" placeholder="Your name" />
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="your@email.com" />
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea rows="5" placeholder="Tell me about your project..."></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message <i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </section>
+    <nav>
+      <ul>
+        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#about"><i class="fas fa-user-alt"></i> About</a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+    </nav>
+    <script src="./script.js"></script>
+  </body>
+</html>
