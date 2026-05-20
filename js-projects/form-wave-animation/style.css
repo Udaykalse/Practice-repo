@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Muli", sans-serif;
+}
+
+.scene {
+  min-height: 100vh;
+  background: steelblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bubbles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.bubble {
+  position: absolute;
+  bottom: -60px;
+  border-radius: 50%;
+  opacity: 0.15;
+  animation: rise linear infinite;
+}
+
+@keyframes rise {
+  0%   { transform: translateY(0) scale(1); opacity: 0.15; }
+  80%  { opacity: 0.15; }
+  100% { transform: translateY(-110vh) scale(1.2); opacity: 0; }
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 28px 44px 32px;
+  border-radius: 8px;
+  width: 320px;
+  position: relative;
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.container h1 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 28px;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.form-control {
+  position: relative;
+  margin: 20px 0 44px;
+  width: 100%;
+}
+
+.form-control input {
+  background: transparent;
+  border: 0;
+  border-bottom: 2px #fff solid;
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 18px;
+  color: #fff;
+  transition: border-color 0.3s;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  outline: 0;
+  border-bottom-color: lightblue;
+}
+
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  pointer-events: none;
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  color: #fff;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  color: lightblue;
+  transform: translateY(-32px);
+}
+
+.strength-bar {
+  height: 3px;
+  margin-top: 6px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+#pwd-wrap:focus-within .strength-bar {
+  opacity: 1;
+}
+
+.strength-fill {
+  height: 100%;
+  width: 0;
+  border-radius: 2px;
+  transition: width 0.4s, background 0.4s;
+}
+
+.eye-btn {
+  position: absolute;
+  right: 0;
+  top: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  padding: 4px;
+  transition: color 0.2s;
+}
+
+.eye-btn:hover {
+  color: #fff;
+}
+
+.btn {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  background: lightblue;
+  padding: 14px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  border: 0;
+  border-radius: 5px;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.15s, background 0.2s;
+}
+
+.btn:hover {
+  background: #87ceeb;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: scale(0);
+  animation: ripple 0.5s linear;
+  pointer-events: none;
+}
+
+@keyframes ripple {
+  to { transform: scale(4); opacity: 0; }
+}
+
+.text {
+  margin-top: 24px;
+  color: #ddd;
+  font-size: 14px;
+  text-align: center;
+}
+
+.text a {
+  color: lightblue;
+  text-decoration: none;
+  position: relative;
+}
+
+.text a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 0;
+  height: 1px;
+  background: lightblue;
+  transition: width 0.25s;
+}
+
+.text a:hover::after {
+  width: 100%;
+}
+
+.shake {
+  animation: shake 0.4s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60%  { transform: translateX(-6px); }
+  40%, 80%  { transform: translateX(6px); }
+}
+
+.success-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 150, 100, 0.85);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s;
+}
+
+.success-overlay.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.check-icon {
+  font-size: 48px;
+  color: #fff;
+  animation: popIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes popIn {
+  from { transform: scale(0); }
+  to   { transform: scale(1); }
+}
+
+.success-text {
+  color: #fff;
+  margin-top: 12px;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
