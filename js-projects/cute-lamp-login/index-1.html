@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cute Lamp Login</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-on="false">
+    <div class="particles" id="particles"></div>
+
+    <div class="container">
+      <div class="lamp-wrapper">
+        <svg
+          class="lamp-svg"
+          viewBox="0 0 200 300"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <ellipse class="inner-glow" cx="100" cy="110" rx="60" ry="30" />
+          <rect
+            class="lamp-base"
+            x="92"
+            y="100"
+            width="16"
+            height="160"
+            rx="8"
+          />
+          <rect
+            class="lamp-base"
+            x="60"
+            y="250"
+            width="80"
+            height="12"
+            rx="6"
+          />
+          <g class="pull-cord">
+            <line class="cord-line" x1="130" y1="110" x2="130" y2="180" />
+            <circle class="cord-bead" cx="130" cy="190" r="6" />
+            <circle
+              class="cord-hit"
+              cx="130"
+              cy="190"
+              r="25"
+              fill="transparent"
+            />
+          </g>
+          <path
+            class="lamp-shade"
+            d="M30 110 C 30 50, 170 50, 170 110 C 170 125, 30 125, 30 110 Z"
+          />
+        </svg>
+        <div class="lamp-hint" id="lampHint">Pull the cord</div>
+      </div>
+
+      <div class="login-form" id="loginForm">
+        <div class="avatar">
+          <svg viewBox="0 0 60 60" width="60" height="60">
+            <circle cx="30" cy="22" r="14" fill="rgba(255,255,255,0.15)" />
+            <ellipse
+              cx="30"
+              cy="54"
+              rx="20"
+              ry="12"
+              fill="rgba(255,255,255,0.1)"
+            />
+          </svg>
+        </div>
+        <h2>Welcome back</h2>
+        <p class="subtitle">Sign in to continue</p>
+        <form onsubmit="return handleSubmit(event);">
+          <div class="form-group">
+            <label>Username</label>
+            <div class="input-wrap">
+              <input
+                type="text"
+                id="username"
+                placeholder="Your name"
+                autocomplete="off"
+              />
+              <span class="input-icon">👤</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <div class="input-wrap">
+              <input type="password" id="password" placeholder="••••••••" />
+              <span class="input-icon toggle-pw" id="togglePw">👁</span>
+            </div>
+          </div>
+          <div class="form-row">
+            <label class="remember">
+              <input type="checkbox" id="remember" />
+              <span>Remember me</span>
+            </label>
+            <a href="#" class="forgot">Forgot password?</a>
+          </div>
+          <button class="login-btn" id="loginBtn" type="submit">
+            <span class="btn-text">Sign In</span>
+            <span class="btn-loader" id="btnLoader"></span>
+          </button>
+          <p class="signup-link">No account? <a href="#">Create one</a></p>
+        </form>
+        <div class="toast" id="toast"></div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/Draggable.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
