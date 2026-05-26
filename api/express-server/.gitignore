@@ -24,3 +24,31 @@ Thumbs.db
 *.swp
 
 # Initial commit: JavaScript interview practice questions #Day-1
+
+
+Update and improve this frontend project professionally.
+
+Requirements:
+
+* Keep HTML, CSS, and JavaScript in separate files
+* Give updated and optimized code
+* Add new modern features and better UI/UX
+* Improve project logic and functionality
+* Make the design responsive for mobile and desktop
+* Use clean folder structure
+* Do not include comments in the code
+* Give complete code separately for:
+
+  * index.html
+  * style.css
+  * script.js
+* Also provide:
+
+  * project folder name
+  * 1–2 line project description
+  * suggested features added
+* Code should be ready to copy and run directly
+* Use modern styling, animations, and interactive JavaScript logic where suitable
+
+Here is the existing code:
+[paste your HTML, CSS, and JS code here]

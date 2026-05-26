@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Modern animated FAQ accordion with smooth interactions">
+  <title>Lumina FAQ | Smart Answers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-gradient"></div>
+  <div class="app-wrapper">
+    <header class="faq-header">
+      <div class="header-badge">
+        <i class="fas fa-comment-question"></i>
+        <span>Knowledge Base</span>
+      </div>
+      <h1>Frequently Asked <span class="highlight">Questions</span></h1>
+      <p class="subtitle">Curated answers with modern elegance — click any question to reveal the answer.</p>
+    </header>
+
+    <div class="faq-container" id="faqContainer">
+      <div class="faq-item active" data-id="1">
+        <div class="faq-question">
+          <h3 class="question-title">Why shouldn't we trust atoms?</h3>
+          <button class="faq-toggle-btn" aria-label="Toggle answer">
+            <i class="fas fa-chevron-down"></i>
+            <i class="fas fa-xmark"></i>
+          </button>
+        </div>
+        <div class="faq-answer">
+          <p>They make up <strong>everything</strong>. Even this answer! Atoms are the building blocks of matter — so trusting them means trusting literally everything around you. A playful paradox.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" data-id="2">
+        <div class="faq-question">
+          <h3 class="question-title">What do you call someone with no body and no nose?</h3>
+          <button class="faq-toggle-btn" aria-label="Toggle answer">
+            <i class="fas fa-chevron-down"></i>
+            <i class="fas fa-xmark"></i>
+          </button>
+        </div>
+        <div class="faq-answer">
+          <p>Nobody knows. The classic play on words: "nobody" means no person, and "knows" sounds like "nose". Pure comedic gold.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" data-id="3">
+        <div class="faq-question">
+          <h3 class="question-title">What's the object-oriented way to become wealthy?</h3>
+          <button class="faq-toggle-btn" aria-label="Toggle answer">
+            <i class="fas fa-chevron-down"></i>
+            <i class="fas fa-xmark"></i>
+          </button>
+        </div>
+        <div class="faq-answer">
+          <p>Inheritance. Because in programming (and in life), inheriting properties from a parent class — or a rich relative — is a shortcut to wealth. <i class="fa-regular fa-face-smile-wink"></i></p>
+        </div>
+      </div>
+
+      <div class="faq-item" data-id="4">
+        <div class="faq-question">
+          <h3 class="question-title">How many tickles does it take to tickle an octopus?</h3>
+          <button class="faq-toggle-btn" aria-label="Toggle answer">
+            <i class="fas fa-chevron-down"></i>
+            <i class="fas fa-xmark"></i>
+          </button>
+        </div>
+        <div class="faq-answer">
+          <p>Ten-tickles! Because octopuses have eight arms and two tentacles — a playful math joke that multiplies the giggles.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" data-id="5">
+        <div class="faq-question">
+          <h3 class="question-title">What is: 1 + 1?</h3>
+          <button class="faq-toggle-btn" aria-label="Toggle answer">
+            <i class="fas fa-chevron-down"></i>
+            <i class="fas fa-xmark"></i>
+          </button>
+        </div>
+        <div class="faq-answer">
+          <p>Depends on who you're asking. Mathematician: 2. Philosopher: a window. Romantic: us. Developer: 11 (string concatenation). Context is everything.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="interaction-footer">
+      <button class="expand-all-btn" id="expandAllBtn">
+        <i class="fas fa-angle-double-down"></i> Expand all
+      </button>
+      <button class="collapse-all-btn" id="collapseAllBtn">
+        <i class="fas fa-angle-double-up"></i> Collapse all
+      </button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
