@@ -1,0 +1,890 @@
+2026-05-25 16:08:42 [INFO] Starting run — target: 20 connections | roles: ['Linux Administrator', 'DevOps Engineer']
+2026-05-25 16:08:43 [INFO] Attempting LinkedIn login...
+2026-05-25 16:10:21 [INFO] Starting run — target: 20 connections | roles: ['Linux Administrator', 'DevOps Engineer']
+2026-05-25 16:10:22 [INFO] Attempting LinkedIn login...
+2026-05-25 16:10:58 [ERROR] Login error: Page.wait_for_selector: Timeout 30000ms exceeded.
+Call log:
+waiting for locator("#username") to be visible
+
+2026-05-25 16:10:58 [ERROR] Login failed. Aborting.
+2026-05-25 16:11:38 [INFO] Starting run — target: 20 connections | roles: ['Linux Administrator', 'DevOps Engineer']
+2026-05-25 16:11:39 [INFO] Attempting LinkedIn login...
+2026-05-25 16:12:13 [ERROR] Login error: Page.wait_for_selector: Timeout 30000ms exceeded.
+Call log:
+waiting for locator("#username") to be visible
+
+2026-05-25 16:12:13 [ERROR] Login failed. Aborting.
+2026-05-25 16:13:12 [INFO] Starting run — target: 20 connections | roles: ['Linux Administrator', 'DevOps Engineer']
+2026-05-25 16:13:13 [INFO] Attempting LinkedIn login...
+2026-05-25 16:13:18 [INFO] Login page loaded.
+2026-05-25 16:13:30 [INFO] After login URL: https://www.linkedin.com/feed/
+2026-05-25 16:13:30 [INFO] Login successful.
+2026-05-25 16:13:30 [INFO] Session cookies saved.
+2026-05-25 16:13:30 [INFO] Searching: Linux Administrator Pune
+2026-05-25 16:13:40 [INFO] Found 22 profiles for role: Linux Administrator
+2026-05-25 16:13:52 [INFO] Visiting: Unknown | Unknown | 
+2026-05-25 16:14:22 [WARNING] No Connect button found for https://www.linkedin.com/in/shubham4120
+2026-05-25 16:14:32 [INFO] Visiting: Unknown | Unknown | Messaging
+2026-05-25 16:14:32 [WARNING] No Connect button found for https://www.linkedin.com/in/sanket-shete-5573847b
+2026-05-25 16:14:45 [INFO] Visiting: Unknown | Unknown | Messaging
+2026-05-25 16:14:45 [WARNING] No Connect button found for https://www.linkedin.com/in/ishant-g-banode-874632b9
+2026-05-25 16:14:56 [INFO] Visiting: Unknown | Unknown | Messaging
+2026-05-25 16:14:56 [WARNING] No Connect button found for https://www.linkedin.com/in/sagar-dongre-288027257
+2026-05-25 16:15:09 [INFO] Visiting: Unknown | Unknown | 
+2026-05-25 16:15:39 [WARNING] No Connect button found for https://www.linkedin.com/in/kadam-ganesh-25840251
+2026-05-25 16:15:53 [INFO] Visiting: Unknown | Unknown | Messaging
+2026-05-25 16:16:00 [WARNING] No Connect button found for https://www.linkedin.com/in/mahesh-salve-111558bb
+2026-05-25 16:16:05 [ERROR] Error connecting to https://www.linkedin.com/in/swati-pansare-b2448016b: Page.goto: Target page, context or browser has been closed
+2026-05-25 16:17:22 [INFO] Starting run — target: 20 connections | roles: ['Linux Administrator', 'DevOps Engineer']
+2026-05-25 16:17:23 [INFO] Session cookies loaded.
+2026-05-25 16:17:30 [INFO] Already logged in via cookies.
+2026-05-25 16:17:30 [INFO] Searching: Linux Administrator Pune
+2026-05-25 16:17:40 [INFO] Found 22 profiles for role: Linux Administrator
+2026-05-25 16:18:05 [ERROR] Error connecting to https://www.linkedin.com/in/shubham4120: Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+waiting for locator("h1") to be visible
+
+2026-05-25 16:18:31 [ERROR] Error connecting to https://www.linkedin.com/in/sanket-shete-5573847b: Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+waiting for locator("h1") to be visible
+
+2026-05-25 16:18:39 [ERROR] Error connecting to https://www.linkedin.com/in/ishant-g-banode-874632b9: Page.goto: Target page, context or browser has been closed
+2026-05-25 16:19:58 [INFO] Starting run — target: 20 connections | roles: ['Linux Administrator', 'DevOps Engineer']
+2026-05-25 16:19:59 [INFO] Session cookies loaded.
+2026-05-25 16:20:07 [INFO] Already logged in via cookies.
+2026-05-25 16:20:07 [INFO] Searching: Linux Administrator Pune
+2026-05-25 16:20:17 [INFO] Found 22 profiles for role: Linux Administrator
+2026-05-25 16:20:36 [WARNING] h1 not found quickly, proceeding anyway: https://www.linkedin.com/in/shubham4120
+2026-05-25 16:20:38 [INFO] Visiting: Unknown | Unknown | Unknown
+2026-05-25 16:21:08 [WARNING] More dropdown error: ElementHandle.click: Timeout 30000ms exceeded.
+Call log:
+attempting click action
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #1
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #2
+  -   waiting 20ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #3
+  -   waiting 100ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #4
+  -   waiting 100ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <p class="c3bd9c77 _50917d1d _13974296 _946ca9a4 _4901f1c0 _35ce4c50 e603f27a _210f0453 f7ed354d ff6144bb">Shubham Shinde</p> from <div role="toolbar" class="_97494b7b d8f04c5e ec0f35c8 b58458ad c965f74d _1c91916b _7d4a09aa _2f7453ef acb95d07 d105d19e _0058f04f ad8482de _44aceaf0">…</div> subtree intercepts pointer events
+  - retrying click action, attempt #5
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #6
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #7
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #8
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <p class="c3bd9c77 _50917d1d _13974296 _946ca9a4 _4901f1c0 _35ce4c50 e603f27a _210f0453 f7ed354d ff6144bb">Shubham Shinde</p> from <div role="toolbar" class="_97494b7b d8f04c5e ec0f35c8 b58458ad c965f74d _1c91916b _7d4a09aa _2f7453ef acb95d07 d105d19e _0058f04f ad8482de _44aceaf0">…</div> subtree intercepts pointer events
+  - retrying click action, attempt #9
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #10
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #11
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #12
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <p class="c3bd9c77 _50917d1d _13974296 _946ca9a4 _4901f1c0 _35ce4c50 e603f27a _210f0453 f7ed354d ff6144bb">Shubham Shinde</p> from <div role="toolbar" class="_97494b7b d8f04c5e ec0f35c8 b58458ad c965f74d _1c91916b _7d4a09aa _2f7453ef acb95d07 d105d19e _0058f04f ad8482de _44aceaf0">…</div> subtree intercepts pointer events
+  - retrying click action, attempt #13
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #14
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #15
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #16
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <p class="c3bd9c77 _50917d1d _13974296 _946ca9a4 _4901f1c0 _35ce4c50 e603f27a _210f0453 f7ed354d ff6144bb">Shubham Shinde</p> from <div role="toolbar" class="_97494b7b d8f04c5e ec0f35c8 b58458ad c965f74d _1c91916b _7d4a09aa _2f7453ef acb95d07 d105d19e _0058f04f ad8482de _44aceaf0">…</div> subtree intercepts pointer events
+  - retrying click action, attempt #17
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #18
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #19
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #20
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <p class="c3bd9c77 _50917d1d _13974296 _946ca9a4 _4901f1c0 _35ce4c50 e603f27a _210f0453 f7ed354d ff6144bb">Shubham Shinde</p> from <div role="toolbar" class="_97494b7b d8f04c5e ec0f35c8 b58458ad c965f74d _1c91916b _7d4a09aa _2f7453ef acb95d07 d105d19e _0058f04f ad8482de _44aceaf0">…</div> subtree intercepts pointer events
+  - retrying click action, attempt #21
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #22
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #23
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #24
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <p class="c3bd9c77 _50917d1d _13974296 _946ca9a4 _4901f1c0 _35ce4c50 e603f27a _210f0453 f7ed354d ff6144bb">Shubham Shinde</p> from <div role="toolbar" class="_97494b7b d8f04c5e ec0f35c8 b58458ad c965f74d _1c91916b _7d4a09aa _2f7453ef acb95d07 d105d19e _0058f04f ad8482de _44aceaf0">…</div> subtree intercepts pointer events
+  - retrying click action, attempt #25
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #26
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #27
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #28
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <p class="c3bd9c77 _50917d1d _13974296 _946ca9a4 _4901f1c0 _35ce4c50 e603f27a _210f0453 f7ed354d ff6144bb">Shubham Shinde</p> from <div role="toolbar" class="_97494b7b d8f04c5e ec0f35c8 b58458ad c965f74d _1c91916b _7d4a09aa _2f7453ef acb95d07 d105d19e _0058f04f ad8482de _44aceaf0">…</div> subtree intercepts pointer events
+  - retrying click action, attempt #29
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #30
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #31
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #32
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <p class="c3bd9c77 _50917d1d _13974296 _946ca9a4 _4901f1c0 _35ce4c50 e603f27a _210f0453 f7ed354d ff6144bb">Shubham Shinde</p> from <div role="toolbar" class="_97494b7b d8f04c5e ec0f35c8 b58458ad c965f74d _1c91916b _7d4a09aa _2f7453ef acb95d07 d105d19e _0058f04f ad8482de _44aceaf0">…</div> subtree intercepts pointer events
+  - retrying click action, attempt #33
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #34
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #35
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #36
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <p class="c3bd9c77 _50917d1d _13974296 _946ca9a4 _4901f1c0 _35ce4c50 e603f27a _210f0453 f7ed354d ff6144bb">Shubham Shinde</p> from <div role="toolbar" class="_97494b7b d8f04c5e ec0f35c8 b58458ad c965f74d _1c91916b _7d4a09aa _2f7453ef acb95d07 d105d19e _0058f04f ad8482de _44aceaf0">…</div> subtree intercepts pointer events
+  - retrying click action, attempt #37
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #38
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #39
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #40
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <p class="c3bd9c77 _50917d1d _13974296 _946ca9a4 _4901f1c0 _35ce4c50 e603f27a _210f0453 f7ed354d ff6144bb">Shubham Shinde</p> from <div role="toolbar" class="_97494b7b d8f04c5e ec0f35c8 b58458ad c965f74d _1c91916b _7d4a09aa _2f7453ef acb95d07 d105d19e _0058f04f ad8482de _44aceaf0">…</div> subtree intercepts pointer events
+  - retrying click action, attempt #41
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #42
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #43
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #44
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <p class="c3bd9c77 _50917d1d _13974296 _946ca9a4 _4901f1c0 _35ce4c50 e603f27a _210f0453 f7ed354d ff6144bb">Shubham Shinde</p> from <div role="toolbar" class="_97494b7b d8f04c5e ec0f35c8 b58458ad c965f74d _1c91916b _7d4a09aa _2f7453ef acb95d07 d105d19e _0058f04f ad8482de _44aceaf0">…</div> subtree intercepts pointer events
+  - retrying click action, attempt #45
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #46
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #47
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #48
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <p class="c3bd9c77 _50917d1d _13974296 _946ca9a4 _4901f1c0 _35ce4c50 e603f27a _210f0453 f7ed354d ff6144bb">Shubham Shinde</p> from <div role="toolbar" class="_97494b7b d8f04c5e ec0f35c8 b58458ad c965f74d _1c91916b _7d4a09aa _2f7453ef acb95d07 d105d19e _0058f04f ad8482de _44aceaf0">…</div> subtree intercepts pointer events
+  - retrying click action, attempt #49
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #50
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #51
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #52
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <p class="c3bd9c77 _50917d1d _13974296 _946ca9a4 _4901f1c0 _35ce4c50 e603f27a _210f0453 f7ed354d ff6144bb">Shubham Shinde</p> from <div role="toolbar" class="_97494b7b d8f04c5e ec0f35c8 b58458ad c965f74d _1c91916b _7d4a09aa _2f7453ef acb95d07 d105d19e _0058f04f ad8482de _44aceaf0">…</div> subtree intercepts pointer events
+  - retrying click action, attempt #53
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #54
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #55
+  -   waiting 500ms
+
+2026-05-25 16:21:08 [WARNING] No Connect button — already connected/pending: https://www.linkedin.com/in/shubham4120
+2026-05-25 16:21:31 [WARNING] h1 not found quickly, proceeding anyway: https://www.linkedin.com/in/sanket-shete-5573847b
+2026-05-25 16:21:32 [INFO] Visiting: Unknown | Unknown | Unknown
+2026-05-25 16:21:32 [WARNING] No Connect button — already connected/pending: https://www.linkedin.com/in/sanket-shete-5573847b
+2026-05-25 16:21:52 [WARNING] h1 not found quickly, proceeding anyway: https://www.linkedin.com/in/ishant-g-banode-874632b9
+2026-05-25 16:21:54 [INFO] Visiting: Unknown | Unknown | Unknown
+2026-05-25 16:21:54 [WARNING] No Connect button — already connected/pending: https://www.linkedin.com/in/ishant-g-banode-874632b9
+2026-05-25 16:22:14 [WARNING] h1 not found quickly, proceeding anyway: https://www.linkedin.com/in/sagar-dongre-288027257
+2026-05-25 16:22:16 [INFO] Visiting: Unknown | Unknown | Unknown
+2026-05-25 16:22:16 [WARNING] No Connect button — already connected/pending: https://www.linkedin.com/in/sagar-dongre-288027257
+2026-05-25 16:22:36 [WARNING] h1 not found quickly, proceeding anyway: https://www.linkedin.com/in/kadam-ganesh-25840251
+2026-05-25 16:22:38 [INFO] Visiting: Unknown | Unknown | Unknown
+2026-05-25 16:23:08 [WARNING] More dropdown error: ElementHandle.click: Timeout 30000ms exceeded.
+Call log:
+attempting click action
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #1
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #2
+  -   waiting 20ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #3
+  -   waiting 100ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #4
+  -   waiting 100ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <div componentkey="df6636ca-d3e7-4469-bdde-5ba5cc6fcee8" class="_258fed07 _5225fa57 e551e3d3 e06a1a17 _2be61b94 _5bde8a6f _89726510 e42ad2a7 d094c391">…</div> from <div role="toolbar" class="_97494b7b d8f04c5e ec0f35c8 b58458ad c965f74d _1c91916b _7d4a09aa _2f7453ef acb95d07 d105d19e _0058f04f ad8482de _44aceaf0">…</div> subtree intercepts pointer events
+  - retrying click action, attempt #5
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #6
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #7
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #8
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <div componentkey="df6636ca-d3e7-4469-bdde-5ba5cc6fcee8" class="_258fed07 _5225fa57 e551e3d3 e06a1a17 _2be61b94 _5bde8a6f _89726510 e42ad2a7 d094c391">…</div> from <div role="toolbar" class="_97494b7b d8f04c5e ec0f35c8 b58458ad c965f74d _1c91916b _7d4a09aa _2f7453ef acb95d07 d105d19e _0058f04f ad8482de _44aceaf0">…</div> subtree intercepts pointer events
+  - retrying click action, attempt #9
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #10
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #11
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #12
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <div componentkey="df6636ca-d3e7-4469-bdde-5ba5cc6fcee8" class="_258fed07 _5225fa57 e551e3d3 e06a1a17 _2be61b94 _5bde8a6f _89726510 e42ad2a7 d094c391">…</div> from <div role="toolbar" class="_97494b7b d8f04c5e ec0f35c8 b58458ad c965f74d _1c91916b _7d4a09aa _2f7453ef acb95d07 d105d19e _0058f04f ad8482de _44aceaf0">…</div> subtree intercepts pointer events
+  - retrying click action, attempt #13
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #14
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #15
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #16
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <div componentkey="df6636ca-d3e7-4469-bdde-5ba5cc6fcee8" class="_258fed07 _5225fa57 e551e3d3 e06a1a17 _2be61b94 _5bde8a6f _89726510 e42ad2a7 d094c391">…</div> from <div role="toolbar" class="_97494b7b d8f04c5e ec0f35c8 b58458ad c965f74d _1c91916b _7d4a09aa _2f7453ef acb95d07 d105d19e _0058f04f ad8482de _44aceaf0">…</div> subtree intercepts pointer events
+  - retrying click action, attempt #17
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #18
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #19
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #20
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <div componentkey="df6636ca-d3e7-4469-bdde-5ba5cc6fcee8" class="_258fed07 _5225fa57 e551e3d3 e06a1a17 _2be61b94 _5bde8a6f _89726510 e42ad2a7 d094c391">…</div> from <div role="toolbar" class="_97494b7b d8f04c5e ec0f35c8 b58458ad c965f74d _1c91916b _7d4a09aa _2f7453ef acb95d07 d105d19e _0058f04f ad8482de _44aceaf0">…</div> subtree intercepts pointer events
+  - retrying click action, attempt #21
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #22
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #23
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #24
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <div componentkey="df6636ca-d3e7-4469-bdde-5ba5cc6fcee8" class="_258fed07 _5225fa57 e551e3d3 e06a1a17 _2be61b94 _5bde8a6f _89726510 e42ad2a7 d094c391">…</div> from <div role="toolbar" class="_97494b7b d8f04c5e ec0f35c8 b58458ad c965f74d _1c91916b _7d4a09aa _2f7453ef acb95d07 d105d19e _0058f04f ad8482de _44aceaf0">…</div> subtree intercepts pointer events
+  - retrying click action, attempt #25
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #26
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #27
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #28
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <div componentkey="df6636ca-d3e7-4469-bdde-5ba5cc6fcee8" class="_258fed07 _5225fa57 e551e3d3 e06a1a17 _2be61b94 _5bde8a6f _89726510 e42ad2a7 d094c391">…</div> from <div role="toolbar" class="_97494b7b d8f04c5e ec0f35c8 b58458ad c965f74d _1c91916b _7d4a09aa _2f7453ef acb95d07 d105d19e _0058f04f ad8482de _44aceaf0">…</div> subtree intercepts pointer events
+  - retrying click action, attempt #29
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #30
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #31
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #32
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <div componentkey="df6636ca-d3e7-4469-bdde-5ba5cc6fcee8" class="_258fed07 _5225fa57 e551e3d3 e06a1a17 _2be61b94 _5bde8a6f _89726510 e42ad2a7 d094c391">…</div> from <div role="toolbar" class="_97494b7b d8f04c5e ec0f35c8 b58458ad c965f74d _1c91916b _7d4a09aa _2f7453ef acb95d07 d105d19e _0058f04f ad8482de _44aceaf0">…</div> subtree intercepts pointer events
+  - retrying click action, attempt #33
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #34
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #35
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #36
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <div componentkey="df6636ca-d3e7-4469-bdde-5ba5cc6fcee8" class="_258fed07 _5225fa57 e551e3d3 e06a1a17 _2be61b94 _5bde8a6f _89726510 e42ad2a7 d094c391">…</div> from <div role="toolbar" class="_97494b7b d8f04c5e ec0f35c8 b58458ad c965f74d _1c91916b _7d4a09aa _2f7453ef acb95d07 d105d19e _0058f04f ad8482de _44aceaf0">…</div> subtree intercepts pointer events
+  - retrying click action, attempt #37
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #38
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #39
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #40
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <div componentkey="df6636ca-d3e7-4469-bdde-5ba5cc6fcee8" class="_258fed07 _5225fa57 e551e3d3 e06a1a17 _2be61b94 _5bde8a6f _89726510 e42ad2a7 d094c391">…</div> from <div role="toolbar" class="_97494b7b d8f04c5e ec0f35c8 b58458ad c965f74d _1c91916b _7d4a09aa _2f7453ef acb95d07 d105d19e _0058f04f ad8482de _44aceaf0">…</div> subtree intercepts pointer events
+  - retrying click action, attempt #41
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #42
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #43
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #44
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <div componentkey="df6636ca-d3e7-4469-bdde-5ba5cc6fcee8" class="_258fed07 _5225fa57 e551e3d3 e06a1a17 _2be61b94 _5bde8a6f _89726510 e42ad2a7 d094c391">…</div> from <div role="toolbar" class="_97494b7b d8f04c5e ec0f35c8 b58458ad c965f74d _1c91916b _7d4a09aa _2f7453ef acb95d07 d105d19e _0058f04f ad8482de _44aceaf0">…</div> subtree intercepts pointer events
+  - retrying click action, attempt #45
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #46
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #47
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #48
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <div componentkey="df6636ca-d3e7-4469-bdde-5ba5cc6fcee8" class="_258fed07 _5225fa57 e551e3d3 e06a1a17 _2be61b94 _5bde8a6f _89726510 e42ad2a7 d094c391">…</div> from <div role="toolbar" class="_97494b7b d8f04c5e ec0f35c8 b58458ad c965f74d _1c91916b _7d4a09aa _2f7453ef acb95d07 d105d19e _0058f04f ad8482de _44aceaf0">…</div> subtree intercepts pointer events
+  - retrying click action, attempt #49
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #50
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #51
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #52
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <div componentkey="df6636ca-d3e7-4469-bdde-5ba5cc6fcee8" class="_258fed07 _5225fa57 e551e3d3 e06a1a17 _2be61b94 _5bde8a6f _89726510 e42ad2a7 d094c391">…</div> from <div role="toolbar" class="_97494b7b d8f04c5e ec0f35c8 b58458ad c965f74d _1c91916b _7d4a09aa _2f7453ef acb95d07 d105d19e _0058f04f ad8482de _44aceaf0">…</div> subtree intercepts pointer events
+  - retrying click action, attempt #53
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #54
+  -   waiting 500ms
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   <span tabindex="-1" data-testid="expandable-text-box" class="_6bbdcbc9 d0bee587 _39b7802b _9cfa15ff _6ff22804 _5c900e66 _3a963eb0 ecc023c9">…</span> intercepts pointer events
+  - retrying click action, attempt #55
+  -   waiting 500ms
+
+2026-05-25 16:23:08 [WARNING] No Connect button — already connected/pending: https://www.linkedin.com/in/kadam-ganesh-25840251
+2026-05-25 16:25:05 [INFO] Starting run — target: 20 connections | roles: ['Linux Administrator', 'DevOps Engineer']
+2026-05-25 16:25:06 [INFO] Session cookies loaded.
+2026-05-25 16:25:13 [INFO] Already logged in via cookies.
+2026-05-25 16:25:13 [INFO] Searching: Linux Administrator Pune
+2026-05-25 16:25:23 [INFO] Found 22 profiles for role: Linux Administrator
+2026-05-25 16:25:42 [INFO] Visiting: Unknown | Unknown | Unknown
+2026-05-25 16:25:42 [INFO] Connect not in top bar, trying More dropdown...
+2026-05-25 16:25:42 [WARNING] No Connect button — already connected/pending: https://www.linkedin.com/in/shubham4120
+2026-05-25 16:26:03 [INFO] Visiting: Unknown | Unknown | Unknown
+2026-05-25 16:26:03 [INFO] Connect not in top bar, trying More dropdown...
+2026-05-25 16:26:03 [WARNING] No Connect button — already connected/pending: https://www.linkedin.com/in/sanket-shete-5573847b
+2026-05-25 16:26:25 [INFO] Visiting: Unknown | Unknown | Unknown
+2026-05-25 16:26:25 [INFO] Connect not in top bar, trying More dropdown...
+2026-05-25 16:26:25 [WARNING] No Connect button — already connected/pending: https://www.linkedin.com/in/ishant-g-banode-874632b9
+2026-05-25 16:26:46 [INFO] Visiting: Unknown | Unknown | Unknown
+2026-05-25 16:26:46 [INFO] Connect not in top bar, trying More dropdown...
+2026-05-25 16:26:46 [WARNING] No Connect button — already connected/pending: https://www.linkedin.com/in/sagar-dongre-288027257
+2026-05-25 16:29:27 [INFO] Starting run — target: 20 connections | roles: ['Linux Administrator', 'DevOps Engineer']
+2026-05-25 16:29:28 [INFO] Session cookies loaded.
+2026-05-25 16:29:35 [INFO] Already logged in via cookies.
+2026-05-25 16:29:35 [INFO] Searching: Linux Administrator Pune
+2026-05-25 16:29:47 [INFO] Found 22 profiles for role: Linux Administrator
+2026-05-25 16:30:01 [INFO] Visiting: Unknown | Unknown | Unknown
+2026-05-25 16:30:01 [WARNING] No Connect button found — already connected/pending: https://www.linkedin.com/in/shubham4120
+2026-05-25 16:30:20 [INFO] Visiting: Unknown | Unknown | Unknown
+2026-05-25 16:30:20 [WARNING] No Connect button found — already connected/pending: https://www.linkedin.com/in/sanket-shete-5573847b
+2026-05-25 16:30:34 [INFO] Visiting: Unknown | Unknown | Unknown
+2026-05-25 16:30:34 [WARNING] No Connect button found — already connected/pending: https://www.linkedin.com/in/ishant-g-banode-874632b9
+2026-05-25 16:30:47 [INFO] Visiting: Unknown | Unknown | Unknown
+2026-05-25 16:30:47 [WARNING] No Connect button found — already connected/pending: https://www.linkedin.com/in/sagar-dongre-288027257
+2026-05-25 16:31:01 [ERROR] Error on https://www.linkedin.com/in/kadam-ganesh-25840251: Page.evaluate: Target page, context or browser has been closed
+2026-05-25 16:36:02 [INFO] Starting run — target: 20 | roles: ['Linux Administrator', 'DevOps Engineer']
+2026-05-25 16:36:02 [INFO] Session cookies loaded.
+2026-05-25 16:36:12 [INFO] Already logged in via cookies.
+2026-05-25 16:36:12 [INFO] Searching: Linux Administrator Pune
+2026-05-25 16:36:24 [INFO] Loaded 0 result cards for: Linux Administrator
+2026-05-25 16:36:24 [INFO] Found 0 cards, checking for Connect buttons...
+2026-05-25 16:36:24 [INFO] Role 'Linux Administrator' done — sent 0. Total: 0/20
+2026-05-25 16:36:27 [INFO] Searching: DevOps Engineer Pune
+2026-05-25 16:36:40 [INFO] Loaded 0 result cards for: DevOps Engineer
+2026-05-25 16:36:40 [INFO] Found 0 cards, checking for Connect buttons...
+2026-05-25 16:36:40 [INFO] Role 'DevOps Engineer' done — sent 0. Total: 0/20
+2026-05-25 16:36:45 [INFO] Run complete. Total sent: 0

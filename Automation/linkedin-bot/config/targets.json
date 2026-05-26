@@ -1,0 +1,7 @@
+{
+  "roles": ["Linux Administrator", "DevOps Engineer"],
+  "location": "Pune",
+  "max_per_run": 20,
+  "max_per_day": 20,
+  "headless": false
+}
