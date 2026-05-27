@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Modern animated navigation menu with smooth transitions and accessibility features">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>NaviFlow | Animated Navigation</title>
+</head>
+<body>
+    <div class="overlay" id="overlay"></div>
+    
+    <nav class="nav" id="nav" aria-label="Main navigation">
+        <div class="nav-brand">
+            <i class="fas fa-compass"></i>
+            <span>NaviFlow</span>
+        </div>
+        <ul class="nav-menu" id="navMenu" role="list">
+            <li role="listitem"><a href="#" class="nav-link active">Home</a></li>
+            <li role="listitem"><a href="#" class="nav-link">Works</a></li>
+            <li role="listitem"><a href="#" class="nav-link">About</a></li>
+            <li role="listitem"><a href="#" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="true">
+            <span class="hamburger-line line1"></span>
+            <span class="hamburger-line line2"></span>
+            <span class="hamburger-line line3"></span>
+        </button>
+    </nav>
+
+    <main class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to <span class="gradient">NaviFlow</span></h1>
+            <p class="hero-subtitle">Experience the smooth animated navigation with modern interactions</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" id="demoBtn">Explore Features</button>
+                <button class="btn btn-secondary" id="toggleDemoBtn">Toggle Menu</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
