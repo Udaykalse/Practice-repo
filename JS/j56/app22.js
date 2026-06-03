@@ -1,0 +1,1 @@
+console.log([5,3,1,4].sort((a,b)=>a-b));

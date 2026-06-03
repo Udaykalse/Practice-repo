@@ -1,0 +1,1 @@
+console.log(Math.min(...[5,2,9,1]));
