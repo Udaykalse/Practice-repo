@@ -1,0 +1,10 @@
+console.log(null === undefined);        // false        
+console.log(null == undefined);         // true       
+console.log(null === {});               // false 
+console.log(null === []);               // false 
+console.log(null == {});                // false
+console.log(null == []);                // false
+console.log([] === undefined);          // false      
+console.log({} === undefined);          // false      
+console.log([] == undefined);           // false     
+console.log({} == undefined);           // false     

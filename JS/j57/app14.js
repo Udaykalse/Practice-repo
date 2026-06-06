@@ -1,0 +1,12 @@
+console.log(1 === "1");          // false;
+console.log([] === []);          // false;
+console.log({} === {});          // false;
+console.log([] == []);          // false;
+console.log({} == {});          // false;
+console.log(true === true);          // true;
+console.log(true == false);          // false;
+console.log(true === false);          // false;
+console.log(false === true);          // false;
+console.log(false == true);          // false;
+console.log(false === false);          // true;
+console.log(false == false);          // true;
