@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>Todo List</h1>
+    <input type="text" id="todoInput" placeholder="Entre A Task" />
+    <br />
+    <br />
+    <button id="addBtn">Add Task</button>
+    <ul id="todoList"></ul>
+    <script>
+      const todoInput = document.getElementById("todoInput");
+      const addBtn = document.getElementById("addBtn");
+      const todoList = document.getElementById("todoList");
+
+      addBtn.addEventListener("click", () => {
+        const task = todoInput.value.trim();
+        if (task) {
+          const li = document.createElement("li");
+          li.innerHTML = `
+        ${task} -- <button class='deleteBtn'>Delete</button>;
+          `;
+          li.querySelector(".deleteBtn").addEventListener("click", () => {
+            li.remove();
+          });
+          todoList.appendChild(li);
+          todoInput.value = "";
+          todoInput.focus();
+        } else {
+          alert("Pls entre a task!");
+        }
+      });
+
+      todoInput.addEventListener("keypress", (event) => {
+        if (event.key === "entre") {
+          addBtn.click();
+        }
+      });
+    </script>
+  </body>
+</html>

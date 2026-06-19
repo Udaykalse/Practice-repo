@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background Changer</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>Click Button to Chnage Color</h1>
+    <button id="redBtn">Red</button>
+    <button id="randomBtn">Random</button>
+    <button id="greenBtn">Green</button>
+    <button id="blueBtn">Blue</button>
+
+    <script>
+      const body = document.body;
+      document.getElementById("redBtn").addEventListener("click", () => {
+        body.style.backgroundColor = "red";
+      });
+
+      document.getElementById("greenBtn").addEventListener("click", () => {
+        body.style.backgroundColor = "green";
+      });
+      document.getElementById("blueBtn").addEventListener("click", () => {
+        body.style.backgroundColor = "Blue";
+      });
+      document.getElementById("randomBtn").addEventListener("click", () => {
+        const randomColor =
+          "#" + Math.floor(Math.random() * 16777215).toString(16);
+        body.style.backgroundColor = randomColor;
+      });
+    </script>
+  </body>
+</html>

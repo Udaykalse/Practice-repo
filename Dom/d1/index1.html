@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Show/Hide Toggle</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+      #content {
+        padding: 20px;
+        background-color: #f0f0f0;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Toggel content Visibility</h1>
+
+    <button id="toggleBtn">Hide COntent</button>
+    <div id="content">
+      <p>This is the content that can be shown or hidden.</p>
+      <p>Click the button above to toggle my visibility!</p>
+    </div>
+    <p id="status">status : visibile</p>
+    <script>
+      const content = document.getElementById("content");
+      const toggleBtn = document.getElementById("toggleBtn");
+      const status = document.getElementById("status");
+
+      toggleBtn.addEventListener("click", () => {
+        content.classList.toggle("hidden");
+        if (content.classList.contains("hidden")) {
+          toggleBtn.textContent = "Show content";
+          status.textContent = "Status: Hidden";
+        } else {
+          toggleBtn.textContent = "Hide content";
+          status.textContent = "Status: Visible";
+        }
+      });
+    </script>
+  </body>
+</html>

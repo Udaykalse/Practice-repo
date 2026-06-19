@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Submit</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <form id="myForm">
+      <input type="text" id="nameInput" placeholder="Entre your name" />
+      <input type="email" id="emailInput" placeholder="Entre your emial" />
+      <button type="submit">Submit</button>
+    </form>
+    <div id="message"></div>
+
+    <script>
+      const form = document.getElementById("myForm");
+      const messageDiv = document.getElementById("message");
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const name = document.getElementById("nameInput").value;
+        const email = document.getElementById("emailInput").value;
+        if (name && email) {
+          messageDiv.innerHTML = `
+            <h3>Form submitted Successfully</h3>
+            <p>Name :- ${name}</p>
+            <p>Email :- ${email}</p>
+            `;
+          messageDiv.style.color = "green";
+          form.reset();
+        } else {
+          messageDiv.innerHTML = "Pls fill all fields!";
+          messageDiv.style.color = "red";
+        }
+      });
+    </script>
+  </body>
+</html>

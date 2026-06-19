@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>Counter :- <span id="counter">0</span></h1>
+    <button id="increment">Plus</button>
+    <button id="decrement">Minus</button>
+    <script>
+      let count = 0;
+      const counterElement = document.getElementById("counter");
+      const incrementBtn = document.getElementById("increment");
+      const decrementBtn = document.getElementById("decrement");
+      incrementBtn.addEventListener("click", () => {
+        count++;
+        counterElement.textContent = count;
+      });
+      decrementBtn.addEventListener("click", () => {
+        count--;
+        counterElement.textContent = count;
+      });
+    </script>
+  </body>
+</html>
