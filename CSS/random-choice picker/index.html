@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Choice Picker — Let Fate Decide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="bg-orbs" aria-hidden="true">
+      <span class="orb orb-1"></span>
+      <span class="orb orb-2"></span>
+      <span class="orb orb-3"></span>
+    </div>
+
+    <main class="wrapper">
+      <header class="header">
+        <div class="logo">
+          <svg
+            width="28"
+            height="28"
+            viewBox="0 0 28 28"
+            fill="none"
+            aria-hidden="true"
+          >
+            <circle cx="14" cy="14" r="13" stroke="#7c3aed" stroke-width="2" />
+            <path
+              d="M9 14h10M14 9l5 5-5 5"
+              stroke="#f59e0b"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span>ChoicePicker</span>
+        </div>
+        <button
+          class="btn-icon"
+          id="clearBtn"
+          title="Clear all choices"
+          aria-label="Clear all choices"
+        >
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path
+              d="M2 4h12M5 4V3a1 1 0 011-1h4a1 1 0 011 1v1M6 7v5M10 7v5M3 4l1 9a1 1 0 001 1h6a1 1 0 001-1l1-9"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </header>
+
+      <section class="card">
+        <div class="card-inner">
+          <h1 class="title">Let fate decide.</h1>
+          <p class="subtitle">
+            Type your choices separated by commas, then press
+            <kbd>Enter</kbd> to spin.
+          </p>
+
+          <div class="input-wrap">
+            <textarea
+              id="textarea"
+              placeholder="Pizza, Sushi, Tacos, Burger…"
+              rows="3"
+              aria-label="Enter your choices separated by commas"
+            ></textarea>
+            <div class="input-meta">
+              <span id="choiceCount" class="count-label">0 choices</span>
+              <button
+                class="btn-spin"
+                id="spinBtn"
+                disabled
+                aria-label="Spin to pick a random choice"
+              >
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M7 1.5A5.5 5.5 0 1112.5 7"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M12.5 1v6h-6"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                Spin
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="tags-section"
+            id="tagsSection"
+            aria-live="polite"
+            aria-label="Your choices"
+          >
+            <div id="tags" class="tags"></div>
+          </div>
+        </div>
+      </section>
+
+      <div
+        class="winner-banner"
+        id="winnerBanner"
+        role="status"
+        aria-live="assertive"
+        hidden
+      >
+        <div class="winner-inner">
+          <span class="winner-label">The pick is</span>
+          <strong class="winner-name" id="winnerName"></strong>
+          <button class="btn-again" id="spinAgainBtn" aria-label="Spin again">
+            Spin again ↺
+          </button>
+        </div>
+      </div>
+
+      <canvas id="confetti" aria-hidden="true"></canvas>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
