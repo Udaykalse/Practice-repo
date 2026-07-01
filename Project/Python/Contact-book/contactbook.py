@@ -5,20 +5,20 @@ from tkinter import messagebox
 root = Tk()
 root.geometry("700x550")
 root.config(bg="#d3f3f5")
-root.title("PythonGeeks Contact Book")
+root.title("My Contact Book")
 root.resizable(False, False)
 
 # ---------------- Contact List ----------------
 contactlist = [
-    ['Siddharth Nigam', '369854712'],
+    ['Siddharth Kond', '369854712'],
     ['Gaurav Patil', '521155222'],
     ['Abhishek Nikam', '78945614'],
-    ['Sakshi Gaikwad', '58745246'],
+    ['Chirag Gaikwad', '58745246'],
     ['Mohit Paul', '5846975'],
     ['Karan Patel', '5647892'],
-    ['Sam Sharma', '89685320'],
+    ['Aman Ch', '89685320'],
     ['John Maheshwari', '98564785'],
-    ['Ganesh Pawar', '85967412']
+    ['Amey Pawar', '85967412']
 ]
 
 Name = StringVar()
