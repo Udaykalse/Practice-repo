@@ -1,0 +1,172 @@
+
+
+\documentclass{resume}
+
+\usepackage[left=0.4in,top=0.35in,right=0.4in,bottom=0.35in]{geometry}
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+
+\name{Udaysinh Kalse}
+
+\address{+91 932-599-9657 \\ Latur, Maharashtra, India}
+\address{
+  \href{mailto:udaykalse123@gmail.com}{udaykalse123@gmail.com} \;|\;
+  \href{https://www.linkedin.com/in/udaykalse12/}{LinkedIn} \;|\;
+  \href{https://github.com/Udaykalse}{GitHub} \;|\;
+  \href{https://developer-portfolio-1egu.vercel.app/}{Portfolio}
+}
+
+\begin{document}
+
+%---------- INTERNSHIP EXPERIENCE ----------
+\begin{rSection}{INTERNSHIP EXPERIENCE}
+
+% \textbf{Frontend Developer Intern} \hfill \textit{Dec 2025 -- May 2026} \\
+% \textit{Bizmorphic Research Pvt. Ltd.} \hfill \textit{Pune}
+% \begin{itemize}
+%     \item 10+ responsive pages and reusable UI components were \textbf{built} with ReactJS, HTML5, CSS3, and JavaScript, reducing per-feature dev time by $\sim$30\%.
+%     \item Data from 5+ REST APIs was \textbf{integrated} into the UI layer, cutting manual data-refresh effort by eliminating static placeholders entirely.
+%     \item Form validation and conditional rendering logic was \textbf{implemented} across 3 key user flows, reducing invalid form submissions by $\sim$40\%.
+%     \item 15+ cross-browser UI bugs were \textbf{debugged} using Chrome DevTools, improving rendering consistency across Chrome, Firefox, and Edge.
+% \end{itemize}
+
+\vspace{1.5mm}
+
+\textbf{ReactJS Intern} \hfill \textit{Oct 2023 -- Mar 2024} \\
+\textit{FirstRioz Private Limited} \hfill \textit{Pune}
+\begin{itemize}
+    \item A library of 12+ modular UI components was \textbf{developed} in ReactJS with javascript, reused across 3 features and cutting duplication by $\sim$25\%.
+    \item Live content from REST APIs was \textbf{consumed} and rendered within React apps, replacing 100\% of static placeholder data with real-time output.
+    \item Component re-renders were \textbf{optimized} using memoization and lazy loading, reducing page load time by $\sim$20\% on key views.
+    \item 10+ recurring front-end bugs were \textbf{resolved} via Tools inspection, directly improving user-reported satisfaction in bugs rounds.
+\end{itemize}
+
+\end{rSection}
+% \begin{rSection}{PROFESSIONAL SUMMARY}
+
+% M.Sc. Computer Science graduate with hands-on experience in Linux, Windows, Docker, Nginx, Bash scripting, Git, and networking fundamentals. Skilled in technical troubleshooting, hardware and software support, VPN connectivity, Microsoft 365, Outlook, IT ticketing systems, and incident management through academic projects and self-learning. Strong problem-solving, customer service, and communication skills with the ability to diagnose and resolve technical issues efficiently. Eager to contribute as a Technical Support Specialist while continuously learning enterprise technologies and delivering excellent customer support.
+
+% \end{rSection}
+%---------- PROJECTS ----------
+\begin{rSection}{PROJECTS}
+
+%  \item \textbf{Portfolio Website}: Developed a responsive personal portfolio using \textbf{React.js} to showcase projects, skills, and achievements. Focused on clean UI design, structured content sections, and smooth navigation for enhanced user experience.\href{https://developer-portfolio-1egu.vercel.app/}{(Live Demo)}
+
+%  \item \textbf{Book Shop Application}: Built an interactive book store platform using \textbf{React.js}, featuring product listings, category filtering, cart management, and responsive design. Improved user experience with clean layouts and intuitive navigation.\href{https://art-gallery-interactive.vercel.app}{(Live Demo)}
+
+
+
+% \item \textbf{Cake-chai Shop Website}: Designed a visually appealing cake shop website with \textbf{Javascript}, including dynamic product displays, flavor categories, and inquiry forms. Emphasized user-friendly UI and optimized responsive layouts.\href{https://chai-coffee-cafe.vercel.app/}{(Live Demo)}
+% \item \textbf{To-Do List Application}: Developed a dynamic task management application using \textbf{JavaScript, HTML5, and CSS3} to efficiently track and organize daily priorities. Features include interactive task creation, state management for completed items, and a fully optimized, responsive UI layout. \href{https://practice-repo-pied.vercel.app/}{(Live Demo)}
+% \end{rSection}
+
+
+% Devoops 
+
+% \item \textbf{Portfolio Website}: Developed a responsive personal portfolio using \textbf{React.js} to showcase projects, technical skills, and achievements. Implemented reusable UI components and responsive layouts for desktop and mobile devices. Optimized page structure and navigation to improve accessibility and user experience.
+% \href{https://developer-portfolio-1egu.vercel.app/}{(Live Demo)}
+
+% \item \textbf{Asset Management System} \hfill
+% \href{https://github.com/Udaykalse/digital-asset-management-frontend}{(Frontend)} \;|\;
+% \href{https://github.com/Udaykalse/digital-asset-management-api}{(Backend)} \\
+% Full-stack app using \textbf{React, Node.js,Express}, and PostgreSQL to track organizational assets. Built a \textbf{RESTful API} supporting full CRUD with SQL joins that cut redundant queries by $\sim$35\%. Designed a real-time dashboard with \textbf{Tailwind CSS} used by a team of 5 during internal testing.
+
+% % \vspace{1mm}
+
+% \item \textbf{User Management REST API} \hfill
+% \href{https://github.com/Udaykalse/daypractice/tree/main/node-practice/curd-node}{(GitHub)} \\
+% Backend CRUD API in \textbf{Node.js and Express} with MVC structure, input validation, centralized error handling, and \textbf{Docker} containerization. Reduced deployment setup time to under 2 minutes via a single \texttt{docker-compose up} command.
+
+
+% \item \textbf{Nginx Docker Troubleshooting Lab}: Developed and debugged an \textbf{Nginx + Docker} environment to diagnose container networking, port mapping, and configuration issues. Investigated common deployment failures using container logs and Nginx configuration files to identify root causes. Strengthened practical knowledge of infrastructure troubleshooting, service connectivity, and web server management.
+% \href{https://github.com/Udaykalse/Practice-repo/tree/main/nignx/nignx-docker-bug}{(GitHub)}
+
+% \vspace{1mm}
+
+% \item \textbf{Linux System Monitoring Tool}: Created a server monitoring solution using \textbf{Bash Scripting and Linux CLI} to track CPU usage, memory consumption, disk utilization, and system uptime. Automated resource reporting and health checks to support proactive system administration. Generated structured system metrics and logs, helping identify performance bottlenecks and resource constraints in Linux environments.
+% \href{https://github.com/Udaykalse/systemmonitor}{(GitHub)}
+
+% % \vspace{1mm}
+% \vspace{1mm}
+
+% \item \textbf{Nginx Reverse Proxy API}: Built a containerized Node.js API using \textbf{Docker, Docker Compose, and Nginx}, implementing reverse proxy routing between services. Configured multi-container networking, request forwarding, and service isolation to simulate a production-ready deployment environment. Improved application accessibility by routing client requests through a centralized Nginx gateway and managing service communication within Docker networks.
+% \href{https://github.com/Udaykalse/Practice-repo/tree/main/nignx/node-nginx-docker-api}{(GitHub)}
+
+% \vspace{1mm}
+
+
+
+% \item \textbf{Docker Static Website Deployment}: Containerized and deployed a static website using \textbf{Docker and Nginx}, enabling consistent deployment across environments. Configured web server settings and container networking to serve static content efficiently. Demonstrated container-based deployment practices, image management, and lightweight web hosting using Dockerized infrastructure.
+% \href{https://github.com/Udaykalse/docker-static-website}{(GitHub)}
+
+
+% \item \textbf{Docker Static Website Deployment}: Containerized and deployed a static website using \textbf{Docker}, configuring container networking and web server settings for consistent deployment.
+% \href{https://github.com/Udaykalse/docker-static-website}{(GitHub)}
+% \item \textbf{MobileCompany}: The MobileCompany project is a web application that utilizes \textbf{Servlet} and \textbf{JDBC} technologies to perform \textbf{CRUD} (Create, Read, Update, Delete) operations on mobile company data. The project is implemented using Java for the backend, HTML for the frontend, and Bootstrap for responsive design. \href{https://github.com/Udaykalse/Mobile_company}{(GitHub Repository)}
+
+% \item \textbf{Job Hunt API}: Developed a scalable backend job portal application using \textbf{Java} and SQL. Designed RESTful APIs for job posting, application management, and user operations with layered architecture. Implemented CRUD operations, request validation, and database integration to build a secure and maintainable backend service.
+% \href{https://github.com/Udaykalse/job-hunt-api}{(GitHub)}
+
+% devoops end
+
+
+
+%---------- TECHNICAL SKILLS ----------
+% \begin{rSection}{TECHNICAL SKILLS}
+% \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+% Programming & JavaScript, HTML5, CSS3 \\
+% Frontend    & React.js\\
+% % Backend     & Node.js \\
+% % Database    & PostgreSQL \\
+% % Tools       & Docker, Git, GitHub, Linux \\
+% Tools       & GitHub, Linux \\
+
+% Soft Skills & Problem Solving, Team Collaboration, Ownership, Adaptability \\
+% \end{tabular}
+% \end{rSection}
+% \begin{rSection}{TECHNICAL SKILLS}
+% \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+% Operating Systems & Linux (CLI), Windows Server \\
+% Networking \& Tools & Git, GitHub, Docker, Network Troubleshooting, Systems Administration \\
+% Frontend          & JavaScript, React.js \\
+% Soft Skills       & Problem Solving, Team Collaboration, Ownership, Adaptability \\
+% \end{tabular}
+% \end{rSection}
+
+\item \textbf{React–Docker CRUD Application}: Built a full-stack CRUD application using FastAPI for high-performance REST APIs and React for a responsive frontend. Implemented complete Create, Read, Update, and Delete operations with clean fast-API design, modular architecture, and containerized deployment using Docker to ensure scalability, consistency, and ease of setup.\href{https://github.com/Udaykalse/fastapi-react-docker-crud}{(GitHub)}
+
+ \item \textbf{AI Data Analyst}: Built an AI-powered data analysis application that processes datasets and generates actionable insights using statistical analysis and data visualization techniques. Focused on data cleaning, trend detection, and presenting results through interactive charts for improved decision-making.\href{https://github.com/Udaykalse/Practice-repo/blob/main/Project/Python/P2/analyst.py}{(GitHub)}
+
+\item \textbf{Tic-Tac-Toe Game (Python)}: Developed a terminal-based two-player Tic-Tac-Toe game using \textbf{Python}. Focused on game logic, input validation, and a simple user experience. \href{https://github.com/Udaykalse/Tictactoe-python}{(GitHub Repository)}
+
+
+\item \textbf{Visual Question Answering App (Python)}: Developed an intelligent application that answers natural language questions based on user-provided images using computer vision and NLP models. Emphasized accurate visual understanding, contextual question processing, and a clean, user-friendly interface.\href{https://github.com/Udaykalse/Practice-repo/tree/main/Project/Python/P1}{(GitHub)}
+
+\item \textbf{Contact Book Application (Python)}: Developed a desktop contact management application using \textbf{Python} and \textbf{Tkinter} with features to add, search, update, and delete contacts through a user-friendly GUI. Implemented efficient contact management with input validation and an intuitive interface.\href{https://github.com/Udaykalse/Practice-repo/tree/main/Project/Python/Contact-book}{(GitHub)}
+
+\begin{rSection}{TECHNICAL SKILLS}
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+
+Programming Languages & JavaScript, Python, SQL \\
+Frontend Development & HTML5, CSS3, React.js \\
+Version Control & Git, GitHub \\
+Containers & Docker \\
+Technical Skills & Troubleshooting, Debugging, REST APIs, API Integration, \\
+                 & Object-Oriented Programming (OOP), Data Structures \\
+Soft Skills & Problem Solving, Communication, Team Collaboration, Documentation, \\
+            & Analytical Thinking, Adaptability, Time Management \\
+
+\end{tabular}
+\end{rSection}
+
+
+
+
+%---------- EDUCATION ----------
+\begin{rSection}{EDUCATION}
+\textbf{M.Sc. Computer Science} , Swami Ramanand Teerth Marathwada University, Nanded  \hfill 2023 -- 2025  \\ 
+\textbf{B.Sc. Computer Science}, Swami Ramanand Teerth Marathwada University, Nanded \hfill 2019 -- 2022
+% \hfill 2019 -- 2022
+\end{rSection}
+
+\end{document}

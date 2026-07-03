@@ -1,0 +1,117 @@
+# Contact Management System
+
+A desktop-based **Contact Management System** developed using **Python**, **Tkinter**, and **SQLite**. This application provides a simple graphical interface to manage contact information with full CRUD (Create, Read, Update, Delete) functionality.
+
+## Features
+
+- Add new contacts
+- View all saved contacts
+- Update existing contact details
+- Delete contacts
+- SQLite database integration
+- User-friendly Tkinter GUI
+- Double-click to edit a contact
+- Input validation for required fields
+
+## Technologies Used
+
+- Python 3
+- Tkinter
+- SQLite3
+- ttk (Treeview)
+
+## Project Structure
+
+```
+Contact-Management-System/
+│
+├── main.py              # Main application
+├── pythontut.db         # SQLite database (created automatically)
+├── README.md
+└── screenshots/
+    └── home.png         # (Optional)
+```
+
+## Installation
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/yourusername/contact-management-system.git
+```
+
+### 2. Navigate to the project folder
+
+```bash
+cd contact-management-system
+```
+
+### 3. Run the application
+
+```bash
+python main.py
+```
+
+## Database
+
+The application automatically creates an SQLite database named:
+
+```
+pythontut.db
+```
+
+with the following table:
+
+| Column | Type |
+|---------|------|
+| mem_id | INTEGER (Primary Key) |
+| firstname | TEXT |
+| lastname | TEXT |
+| gender | TEXT |
+| age | TEXT |
+| address | TEXT |
+| contact | TEXT |
+
+## How to Use
+
+1. Launch the application.
+2. Click **+ ADD NEW** to add a contact.
+3. Fill in all required fields.
+4. Click **Save**.
+5. Double-click any contact to edit it.
+6. Click **Update** to save changes.
+7. Select a contact and click **DELETE** to remove it.
+
+## Screenshots
+
+Add screenshots inside the `screenshots` folder.
+
+Example:
+
+```
+screenshots/
+├── home.png
+├── add-contact.png
+└── update-contact.png
+```
+
+## Future Improvements
+
+- Search contacts
+- Email field
+- Import/Export CSV
+- Dark mode
+- Contact categories
+- Profile pictures
+- Phone number validation
+- Backup and restore database
+
+## License
+
+This project is open source and available under the **MIT License**.
+
+## Author
+
+**Udaysinh Kalse**
+
+If you found this project useful, consider giving it a ⭐ on GitHub.
