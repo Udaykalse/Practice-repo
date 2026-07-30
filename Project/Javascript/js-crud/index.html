@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product CRUD MVC</title>
+
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<header class="container pt-4 pb-3">
+    <h1 class="fw-bold">Product CRUD Project</h1>
+</header>
+
+<div class="line w-100 my-3"></div>
+
+<section class="container">
+
+    <div class="bg-body py-5 text-center">
+
+        <h2 class="mb-5 text-decoration-underline">
+            List of Products
+        </h2>
+
+        <!-- Product Name -->
+        <input
+            id="pName"
+            class="form-control w-75 mx-auto mb-2"
+            type="text"
+            placeholder="Product Name">
+
+        <div id="alertName"
+             class="alert alert-danger w-75 mx-auto p-2 d-none">
+            Capital letter and 2-10 small letters
+        </div>
+
+        <!-- Product Price -->
+        <input
+            id="pPrice"
+            class="form-control w-75 mx-auto mb-2"
+            type="number"
+            placeholder="Product Price">
+
+        <div id="alertPrice"
+             class="alert alert-danger w-75 mx-auto p-2 d-none">
+            Price must be between 1 and 10000
+        </div>
+
+        <!-- Category -->
+        <input
+            id="pCat"
+            class="form-control w-75 mx-auto mb-2"
+            type="text"
+            placeholder="Product Category">
+
+        <div id="alertCate"
+             class="alert alert-danger w-75 mx-auto p-2 d-none">
+            Category should match product name
+        </div>
+
+        <!-- Description -->
+        <textarea
+            id="pDesc"
+            class="form-control w-75 mx-auto mb-2"
+            style="resize:none"
+            placeholder="Product Description"></textarea>
+
+        <!-- Buttons -->
+
+        <div class="w-75 mx-auto">
+
+            <div class="row">
+
+                <div class="col text-start">
+
+                    <button
+                        id="updateBtn"
+                        class="btn btn-warning">
+                        Update Product
+                    </button>
+
+                </div>
+
+                <div class="col text-end">
+
+                    <button
+                        id="resetBtn"
+                        class="btn btn-secondary">
+                        Reset
+                    </button>
+
+                    <button
+                        id="addBtn"
+                        class="btn btn-primary">
+                        Add Product
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Search -->
+
+        <div class="row w-75 mx-auto mt-5">
+
+            <div class="col-md-6">
+
+                <input
+                    id="searchName"
+                    class="form-control"
+                    placeholder="Search By Name">
+
+            </div>
+
+            <div class="col-md-6">
+
+                <input
+                    id="searchCate"
+                    class="form-control"
+                    placeholder="Search By Category">
+
+            </div>
+
+        </div>
+
+        <!-- Table -->
+
+        <div class="w-75 mx-auto">
+
+            <table class="table table-striped text-center mt-4">
+
+                <thead>
+
+                <tr>
+
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+
+                </tr>
+
+                </thead>
+
+                <tbody id="myTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</section>
+
+<div class="line w-100 my-3"></div>
+
+<footer class="container text-center py-3">
+
+    <h5>&copy; Product CRUD Project</h5>
+
+</footer>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+
+<script src="js/model.js"></script>
+<script src="js/view.js"></script>
+<script src="js/controller.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
