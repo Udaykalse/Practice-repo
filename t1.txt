@@ -170,3 +170,12 @@ Soft Skills & Problem Solving, Communication, Team Collaboration, Documentation,
 \end{rSection}
 
 \end{document}
+
+
+
+
+count=1
+for file in *.js; do
+    mv "$file" "main_App$count.js"
+    ((count++))
+done
