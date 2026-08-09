@@ -176,6 +176,6 @@ Soft Skills & Problem Solving, Communication, Team Collaboration, Documentation,
 
 count=1
 for file in *.js; do
-    mv "$file" "main_App$count.js"
+    mv "$file" "mainApp$count.js"
     ((count++))
 done
