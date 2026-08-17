@@ -23,7 +23,10 @@ docker-static-website/
 ├── script.js
 ├── Dockerfile
 ├── .dockerignore
-└── README.md
+├── README.md
+└── screenshots/
+    ├── home.png
+    └── button-click.png
 ```
 
 ## 🐳 How Docker Works in This Project
