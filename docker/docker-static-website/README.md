@@ -83,6 +83,11 @@ Documents that Nginx listens on port `80` inside the container.
 
 ---
 
+
+screenshots/home.png
+screenshots/button-click.png
+
+
 # ⚙️ Requirements
 
 Make sure you have:
