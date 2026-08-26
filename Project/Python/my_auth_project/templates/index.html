@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Auth System</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            width: 320px;
+        }
+        h2 { text-align: center; color: #333; margin-bottom: 20px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; color: #666; font-size: 14px; }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover { background-color: #0056b3; }
+        .switch {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+            color: #666;
+        }
+        .switch a { color: #007bff; text-decoration: none; cursor: pointer; }
+        .switch a:hover { text-decoration: underline; }
+        .message {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .error { color: #dc3545; }
+        .success { color: #28a745; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Login Form -->
+    <div id="login-box">
+        <h2>Login</h2>
+        <div class="form-group">
+            <label>Username</label>
+            <input type="text" id="login-user" required>
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" id="login-pass" required>
+        </div>
+        <button onclick="handleLogin()">Login</button>
+        <div class="switch">Don't have an account? <a onclick="toggleForms()">Sign up</a></div>
+    </div>
+
+    <!-- Signup Form -->
+    <div id="signup-box" class="hidden">
+        <h2>Sign Up</h2>
+        <div class="form-group">
+            <label>Username</label>
+            <input type="text" id="signup-user" required>
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" id="signup-pass" required>
+        </div>
+        <button onclick="handleSignup()">Register</button>
+        <div class="switch">Already have an account? <a onclick="toggleForms()">Login</a></div>
+    </div>
+
+    <div id="message" class="message"></div>
+</div>
+
+<script>
+    function toggleForms() {
+        document.getElementById('login-box').classList.toggle('hidden');
+        document.getElementById('signup-box').classList.toggle('hidden');
+        document.getElementById('message').innerText = '';
+    }
+
+    async function handleSignup() {
+        const username = document.getElementById('signup-user').value;
+        const password = document.getElementById('signup-pass').value;
+        const msgDiv = document.getElementById('message');
+
+        const response = await fetch('/api/signup', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ username, password })
+        });
+        const data = await response.json();
+
+        msgDiv.className = data.success ? 'message success' : 'message error';
+        msgDiv.innerText = data.message;
+        if (data.success) setTimeout(toggleForms, 1500);
+    }
+
+    async function handleLogin() {
+        const username = document.getElementById('login-user').value;
+        const password = document.getElementById('login-pass').value;
+        const msgDiv = document.getElementById('message');
+
+        const response = await fetch('/api/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ username, password })
+        });
+        const data = await response.json();
+
+        msgDiv.className = data.success ? 'message success' : 'message error';
+        msgDiv.innerText = data.message;
+    }
+</script>
+
+</body>
+</html>
