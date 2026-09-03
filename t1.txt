@@ -175,7 +175,7 @@ Soft Skills & Problem Solving, Communication, Team Collaboration, Documentation,
 
 
 count=1
-for file in *.js; do
-    mv "$file" "mainApp$count.js"
+for file in *.py; do
+    mv "$file" "App$count.py"
     ((count++))
 done
