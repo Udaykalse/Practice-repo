@@ -1,0 +1,45 @@
+5-- SELECT * FROM dam_users;
+SELECT * FROM dam_assets;
+-- SELECT * FROM dam_roles;
+-- SELECT column_name
+-- FROM information_schema.columns
+-- WHERE table_name = 'dam_roles'
+-- ORDER BY ordinal_position;
+
+-- ALTER TABLE dam_roles
+-- ADD COLUMN can_create BOOLEAN DEFAULT false,
+-- ADD COLUMN can_update BOOLEAN DEFAULT false,
+-- ADD COLUMN can_delete BOOLEAN DEFAULT false;
+
+
+-- SELECT id, role_name, can_create, can_update, can_delete
+-- FROM dam_roles;
+
+
+
+
+
+
+
+
+-- SHOW data_directory;
+
+-- SELECT * FROM dam_users WHERE email=$1;
+-- Table Name = "dam_roles"
+-- Column Na
+-- "id"
+-- "role_name"
+-- \d dam_assets;
+-- SELECT column_name, data_type, is_nullable
+-- FROM information_schema.columns
+-- WHERE table_name = 'dam_assets';
+-- ALTER TABLE dam_assets
+-- ADD COLUMN files JSONB;
+-- ALTER TABLE dam_assets
+-- ALTER COLUMN file_url DROP NOT NULL;
+
+-- ALTER TABLE dam_assets
+-- ADD COLUMN file_type VARCHAR(20);
+-- ADD COLUMN file_url TEXT,
+-- ALTER TABLE dam_assets
+-- ALTER COLUMN file_type SET DEFAULT 'url';
