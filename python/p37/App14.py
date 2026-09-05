@@ -1,0 +1,12 @@
+jobs = ["Google", "Microsoft", "Amazon"]
+jobs.append("TCS")
+jobs.insert(1,"Infosys")
+jobs.remove("Amazon")
+print(jobs)
+print(jobs)
+print(jobs[0])
+print(jobs[-1])
+print(len(jobs))
+jobs.sort()
+print(jobs)
+print(jobs)
