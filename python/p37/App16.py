@@ -1,0 +1,6 @@
+languages = ("Python", "Java", "JavaScript", "SQL")
+print(languages[1])
+print(languages[-1])
+print(len(languages))
+print(languages[0:2])
+print(languages.index("SQL")) 
