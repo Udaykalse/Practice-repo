@@ -1,4 +1,4 @@
-name = "Amey"
+name = "Vipul"
 age = 25
 city = "Latur"
 lang = 'Python'

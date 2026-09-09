@@ -1,7 +1,7 @@
-name = "Amey"
+name = "Uday"
 age = 25
 city = "Latur"
-lang = 'Python'
+lang = 'Java'
 learning=True
 print("Name:",name)
 print("Age:",age)
