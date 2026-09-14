@@ -176,6 +176,6 @@ Soft Skills & Problem Solving, Communication, Team Collaboration, Documentation,
 
 count=1
 for file in *.py; do
-    mv "$file" "App$count.py"
+    mv "$file" "demo$count.py"
     ((count++))
 done

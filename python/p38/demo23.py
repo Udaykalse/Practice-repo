@@ -1,4 +1,4 @@
-python  ={"Python","SQL","Git"}
-backend = {"Python","FastAPI","PostgreSQL"}
+python  ={"Python","Javascript","Git"}
+backend = {"Python","FastAPI","PostgreSQL","React"}
 result = (python.difference(backend))
 print(result)
