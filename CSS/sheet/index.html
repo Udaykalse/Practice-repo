@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Google Sheets Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  </head>
+  <body style="font-family: Arial, sans-serif; padding: 20px">
+    <div style="width: 800px; margin: auto; text-align: center">
+      <h2>Sheet Data Visualization</h2>
+      <select
+        id="sheetSelector"
+        onchange="loadSheetData()"
+        style="padding: 10px; font-size: 16px; margin-bottom: 20px"
+      >
+        <option value="Connections">Connections</option>
+        <option value="Engagement">Engagement</option>
+        <option value="MNC Engag">MNC Engag</option>
+        <option value="MNC ENgagement(Comments)">
+          MNC Engagement (Comments)
+        </option>
+        <option value="Emails">Emails</option>
+        <option value="job application tracker">Job Application Tracker</option>
+      </select>
+      <canvas id="myChart"></canvas>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
